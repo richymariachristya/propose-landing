@@ -3,7 +3,7 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     maxWidth: {
-      container: "1216px",
+      container: "1440px",
     },
     screens: {
       xs: "350px",
