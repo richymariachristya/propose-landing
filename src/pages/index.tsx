@@ -3,7 +3,7 @@ import Head from "next/head"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import Content from "@/components/content"
-import ProposeLanding from "./home/ProposeLanding"
+import ProposeLandingPage from "./home/ProposeLandingPage"
 
 export default function Home() {
     const footerData = {
@@ -37,7 +37,7 @@ export default function Home() {
         <Content contentResponse={contentData}></Content>
        </main> */}
 
-            <ProposeLanding />
+            <ProposeLandingPage />
             <Footer footerResponse={footerData}></Footer>
         </>
     )

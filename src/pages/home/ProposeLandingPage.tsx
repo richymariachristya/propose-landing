@@ -12,7 +12,7 @@ const OfferCountdownProp = {
   offercountSec: 20,
 }
 
-const ProposeLanding = () => {
+const ProposeLandingPage = () => {
   return (
     <>
       <OfferTimeline 
@@ -27,4 +27,4 @@ const ProposeLanding = () => {
   );
 }
 
-export default ProposeLanding;
+export default ProposeLandingPage;
