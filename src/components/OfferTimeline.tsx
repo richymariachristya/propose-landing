@@ -1,4 +1,4 @@
-import idpLogo from '../../../public/images/idp-logo.61153ab6.svg';
+import idpLogo from '@/../../public/images/idp-logo.61153ab6.svg';
 import Image from 'next/image';
 
 interface InstitutionLogoProp {
