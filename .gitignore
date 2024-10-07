@@ -7,10 +7,13 @@
 
 # testing
 /coverage
+/src/__snapshots__
 
 # next.js
 /.next/
 /out/
+# open-next build
+.open-next
 
 # production
 /build
@@ -23,14 +26,35 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
 
 # local env files
-.env*.local
+.env
+.env.*
 
 # vercel
 .vercel
 
+# Sonar.properties files
+.sonar-project.properties
+/sonar-project.properties
+
+#cicd pipeline file
+.gitlab-ci.yml
+/.gitlab-ci.yml
+
+# Jobfiles folder
+.jobs-files
+/jobs-files
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/src/tailwind
+
+# cdk
+cdk/node_modules
+cdk/output
+cdk/cdk.context.json
+cdk/cdk.out
+cdk/cdk.out/*
