@@ -6,12 +6,18 @@ interface InstitutionLogoProp {
   institutionName: string;
   institutionSite:string;
 }
+interface OfferCountdown  extends InstitutionLogoProp{
+  offercountHour: number;
+  offercountMin: number;
+  offercountSec: number;
+}
 
-const OfferTimeline = ({institutionLogo,institutionName,institutionSite}:InstitutionLogoProp) => {
+
+const OfferTimeline = ({institutionLogo,institutionName,institutionSite,offercountHour,offercountMin,offercountSec}:OfferCountdown) => {
   return (
     <>
       <div className='h-[40px] bg-secondary400 flex justify-center py-[10px]'>
-        <p className='text-white text-small'>This offer ends in 24h 00m 20s</p>
+        <p className='text-white text-small'>This offer ends in {offercountHour}h {offercountMin}m {offercountSec}s</p>
       </div>
       <div className='h-[40px] bg-white flex justify-center'>
         <div className="flex flex-shrink-0 items-center gap-[13px]">
