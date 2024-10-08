@@ -134,7 +134,9 @@ p,
 .x-small {
   @apply text-x-small;
 }
-
+.container{
+  max-width: 1200px;
+}
 /* typograpy */
 
 @layer utilities {}

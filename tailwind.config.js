@@ -22,78 +22,73 @@ module.exports = {
         inter: ["Inter", "sans-serif"],
       },
       colors: {
-         // neutral
-          neutral700: "#374151",
-          neutral500: "#6B7280",
-        // neutral
-        neutral700: "#374151",
-        neutral500: "#6B7280",
-        // grey set colors starts
-        grey50: "#F9FAFB",
-        grey100: "#F2F2F2",
-        grey200: "#D9D9D9",
-        grey300: "#ADB2B6",
-        grey400: "#82898F",
-        grey500: "#5C656E",
-        grey600: "#333F48",
-        grey700: "#767676",
-        // grey set colors ends
-        // primary (blue) set colors starts
-        primary50: "#EDF7FF",
-        primary100: "#E6F1FB",
-        primary200: "#E6F1FB",
-        primary300: "#0086F8",
-        primary400: "#4664DC",
-        primary500: "#0657AD",
-        // primary (blue) set colors ends
-        // secondary set colors starts
-        secondary100: "#FDFAAF",
-        secondary200: "#B4E646",
-        secondary300: "#51C21A",
-        secondary400: "#168721",
-        secondary500: "#1E8782",
-        // secondary set colors ends
-        // Tertiary set colors starts
-        tertiary50: "#FFF7E0",
-        tertiary100: "#FFF0BE",
-        tertiary200: "#FFD700",
-        tertiary300: "#FFA514",
-        tertiary400: "#FF8300",
-        tertiary500: "#973A14",
-        tertiary600: "#BC5B00",
-        // Tertiary set colors ends
-        // validation set colors starts
-        positive: "#168721",
-        positiveLight: "#EEF2C0",
-        positiveDark: "#106519",
-        // validation set colors ends
-        // validation set colors starts
-        negative: "#BC0000",
-        negativeLight: "#FFEEEE",
-        negativeDark: "#800101",
-        // validation set colors ends
-        // shades set colors starts
-        darkGrey: "#82898F",
-        textGrey: "#767676",
-        textBlue: "#4B4EFC",
-        // shades set colors ends
+        grey: {
+          300: "#333",
+          400: "#707070",
+          500: "#767676",
+          600: "#e6e6e6",
+          },
+        neutral: {
+          50: "#F9FAFB",
+          100: "#F2F2F2",
+          200: "#D9D9D9",
+          300: "#ADB2B6",
+          400: "#82898F",
+          500: "#5C656E",
+          600: "#333F48",
+          700: "#767676",
+        },
+        primary: {
+          50: "#EDF7FF",
+          100: "#E6F1FB",
+          200: "#E6F1FB",
+          300: "#0086F8",
+          400: "#4664DC",
+          500: "#0657AD",
+          600:"#0FBEFD",
+        },
+        secondary: {
+          100: "#FDFAAF",
+          200: "#B4E646",
+          300: "#51C21A",
+          400: "#0ACBA0",
+          500: "#168721",
+        },
+        tertiary: {
+          50: "#FFF7E0",
+          100: "#FFF0BE",
+          200: "#FFD700",
+          300: "#FFA514",
+          400: "#FF8300",
+          500: "#973A14",
+          600: "#BC5B00",
+        },
+        positive: {
+          default: "#168721",
+          light: "#EEF2C0",
+          dark: "#106519",
+        },
+        negative: {
+          default: "#BC0000",
+          light: "#FFEEEE",
+          dark: "#800101",
+        }
       },
       fontSize: {
-        // Desktop fontsize starts
-        "heading-xl": ["5.2rem", "1.3"],
-        "heading-lg": ["4.4rem", "1.3"],
-        heading1: ["4rem", "1.3"],
-        heading2: ["3.6rem", "1.3"],
-        heading3: ["3.2rem", "1.3"],
-        heading4: ["2.8rem", "1.3"],
-        heading5: ["2.4rem", "1.3"],
-        heading6: ["2rem", "1.3"],
-        //para fontsize starts
-        "para-lg": ["1.8rem", "1.3"],
-        para: ["1.6rem", "1.5"],
-        small: ["1.4rem", "1.5"],
-        "x-small": ["1.2rem", "1.5"],
-        //para fontsize ends
+        "heading-xl": ["5.2rem", "1.3"], //'52px','56px'
+        "heading-lg": ["4.4rem", "1.3"], //'44px','48px'
+        heading1: ["4rem", "1.3"], //'40px','48px'
+        heading2: ["3.6rem", "1.3"], //'36px','44px'
+        heading3: ["3.2rem", "1.3"], //'32px','40px'
+        heading4: ["2.8rem", "1.3"], //'28px', '36px'
+        heading5: ["2.4rem", "1.3"], //'24px', '32px'
+        heading6: ["2rem", "1.3"], //'20px', '28px'
+        "para-lg": ["1.8rem", "1.5"], //'18px', '24px'
+        para: ["1.6rem", "1.5"], //'16px', '24px'
+        small: ["1.4rem", "1.5"], //'14px', '20px'
+        "x-small": ["1.2rem", "1.5"], //'12px','20px'
+        "xs-small": ["1rem", "1.5"], //'10px','20px'
+        overline: ["1.4rem", "1.5"], //'14px', '12px'
       },
       backgroundImage: {
         "custom-gradient":

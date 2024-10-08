@@ -16,7 +16,7 @@ interface OfferCountdown  extends InstitutionLogoProp{
 const OfferTimeline = ({institutionLogo,institutionName,institutionSite,offercountHour,offercountMin,offercountSec}:OfferCountdown) => {
   return (
     <>
-      <div className='h-[40px] bg-secondary400 flex justify-center py-[10px]'>
+      <div className='h-[40px] bg-secondary-500 flex justify-center py-[10px]'>
         <p className='text-white text-small'>This offer ends in {offercountHour}h {offercountMin}m {offercountSec}s</p>
       </div>
       <div className='h-[40px] bg-white flex justify-center'>
