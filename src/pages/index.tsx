@@ -3,7 +3,7 @@ import Head from "next/head"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import Content from "@/components/content"
-import ProposeLandingPage from "../pages/home/Page"
+import ProposeLandingPage from "./home"
 
 export default function Home() {
     const footerData = {
