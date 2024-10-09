@@ -20,11 +20,11 @@ const HeroBanner = ({institutionName,instituteDestination,studentName,studentPro
                 </p>
             </div>
             <div className="flex flex-col items-center lg:w-1/2 md:w-full lg:ml-10 md:mx-0 lg:justify-center">
-                <div className="flex gap-1 flex-col rounded-lg p-3 bg-grey-300 w-full p-3">
-                    <p className="font-semibold font-inter text-white small uppercase">exclusive offer</p>
-                    <h6 className="font-bold font-farro text-para-lg text-primary-600">Get an offer in principle for...</h6>
-                    <p className="font-semibold font-inter text-white small block">{studentProposeCourse}
-                    <span className="font-normal font-inter text-white small block">{institutionName}, {instituteDestination}</span></p>
+                <div className="flex gap-1 flex-col rounded-lg p-3 bg-grey-300 w-full">
+                    <p className="font-semibold font-inter text-white x-small uppercase">exclusive offer</p>
+                    <h6 className="font-bold font-farro para-lg text-primary-600">Get an offer in principle for...</h6>
+                    <p className="font-semibold font-inter text-white x-small block">{studentProposeCourse}
+                    <span className="font-normal font-inter text-white x-small block">{institutionName}, {instituteDestination}</span></p>
                 </div>
                 
             </div>
