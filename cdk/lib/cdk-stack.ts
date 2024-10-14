@@ -120,7 +120,7 @@ export class CdkStack extends cdk.Stack {
         const securityGroup = SecurityGroup.fromLookupByName(
             this,
             "SG",
-            `${process.env.AWS_SECURITY_GROUP}`,
+            `sg-07285275b74d6d3e9`,
             vpc
         )
 
