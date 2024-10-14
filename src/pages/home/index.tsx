@@ -37,7 +37,8 @@ export default function ProposeLandingPage() {
                 campaign_id: "campg-1",
             }
             await getStudentInfo(payload).then((res: any) => {
-                setData(res)
+                setData(res.message)
+                console.log(data)
             })
         } catch (error) {
             console.error("Error fetching user profile results", error)
@@ -45,7 +46,6 @@ export default function ProposeLandingPage() {
     }
     useEffect(() => {
         getUserProfileDetails()
-        console.log(data)
     }, [])
     return (
         <>
@@ -61,7 +61,7 @@ export default function ProposeLandingPage() {
                 </Dialog>
             </div> */}
             <OfferTimeline
-                institutionLogo={institutionProp.institutionLogo}
+                institutionLogo={data?.institution_logo_url}
                 institutionName={institutionProp.institutionName}
                 institutionSite={institutionProp.institutionSite}
                 offercountHour={OfferCountdownProp.offercountHour}
@@ -69,10 +69,11 @@ export default function ProposeLandingPage() {
                 offercountSec={OfferCountdownProp.offercountSec}
             />
             <HeroBanner
-                studentName={StudentDetails.studentName}
-                studentProposeCourse={StudentDetails.studentProposeCourse}
+                studentName={data?.student_welcome_text}
+                studentProposeCourse={data?.course_name}
                 instituteDestination={institutionProp.instituteDestination}
-                institutionName={institutionProp.institutionName}
+                institutionName={data?.institution_name}
+                aiGeneratedContent={data?.ai_course_text}
             />
             <div className="">
                 <div className="container flex lg:flex-row mx-auto md:flex-col md:gap-10">
