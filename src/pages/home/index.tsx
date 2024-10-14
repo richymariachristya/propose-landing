@@ -27,10 +27,10 @@ const institutionProp = {
 }
 
 const carouselImage = [
-    "https://via.placeholder.com/800x400.png?text=Slide+1",
-    "https://via.placeholder.com/800x400.png?text=Slide+2",
-    "https://via.placeholder.com/800x400.png?text=Slide+3",
-    "https://via.placeholder.com/800x400.png?text=Slide+4",
+    "https://images.ctfassets.net/8bbwomjfix8m/6zjBSfh46MZ3Zbyrdak9ux/598514dcd1ac9ebccfab66d3c59af238/Study-in-Canada.jpg",
+    "https://images.ctfassets.net/8bbwomjfix8m/5Cvk9MhZe3JF9l6giwWmVH/fa3f5b44effbf2c403204bfffcbf81e1/Ireland_2.jpg",
+    "https://images.ctfassets.net/8bbwomjfix8m/2CYqmyVmRIAh3o6rmQt8dK/fa6df88d95385ffb8ad0b1acdae99e68/Australia.jpg",
+    "https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2022/05/01082927/partha-narasimhan-x0NvSdPk404-unsplash-1600x900.jpg",
 ]
 
 const StudentDetails = {
