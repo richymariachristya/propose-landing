@@ -28,7 +28,7 @@ const HeroBannerComponent = ({
                     </p>
                 </div>
                 <div className="flex flex-col items-center lg:w-1/2 md:w-full lg:ml-10 md:mx-0 lg:justify-center">
-                    <div className="flex gap-1 flex-col rounded-lg p-3 bg-grey-300 w-full">
+                    <div className="flex gap-1 flex-col rounded-lg p-4 bg-grey-300 w-full">
                         <p className="font-semibold font-inter text-white x-small uppercase">
                             exclusive offer
                         </p>

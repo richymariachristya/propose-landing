@@ -5,14 +5,25 @@ import { useEffect, useState } from "react"
 import { getStudentInfo } from "@/service/api-service"
 import Dialog from "@/components/dialog"
 import CarouselComponent from "@/components/CarouselComponent"
+import RegardsComponent from "@/components/RegardsComponent"
+import AboutComponent from "@/components/AboutComponent"
+
 const institutionProp = {
     institutionLogo: "/images/unisq-logo.svg",
+    institutionSmallLogo:"/public/images/ins-logo-small.png"
     institutionName: "University of Southern Queensland",
     institutionSite: "https://www.unisq.edu.au/",
     instituteVideoImage: "/images/video-image.png",
     instituteVideoUrl:
         "https://videos.ctfassets.net/8bbwomjfix8m/7lraOsI97RgFJk4cqQyXdP/11e4e785023049565bde19c3f062404d/Video_-1_Why_study_abroad.mp4",
     instituteDestination: "Australia",
+    instituteCourseName:"Course name",
+    instituteWorldRanking:"101",
+    instituteStartDate:"Jan 30, 2024",
+    instituteEntryScore:6.5,
+    instituteStudyLevel:"Masters degree",
+    instituteLocation:"Birmingham, UK",
+    instituteCourseCost:"£29,000"
 }
 
 const carouselImage = [
@@ -72,6 +83,7 @@ export default function ProposeLandingPage() {
                 institutionLogo={data?.institution_logo_url}
                 institutionName={institutionProp.institutionName}
                 institutionSite={institutionProp.institutionSite}
+                courseName={institutionProp.courseName}
                 offercountHour={OfferCountdownProp.offercountHour}
                 offercountMin={OfferCountdownProp.offercountMin}
                 offercountSec={OfferCountdownProp.offercountSec}
@@ -96,10 +108,23 @@ export default function ProposeLandingPage() {
                             }
                         />
                     </div>
-                    <div className="flex flex-col items-center lg:w-1/2 md:w-full lg:ml-10 md:mx-0 lg:justify-center">hi</div>
+                    <div className="flex flex-col items-center lg:w-1/2 md:w-full lg:ml-10 md:mx-0 lg:justify-center">
+                        <AboutComponent institutionName = {institutionProp.institutionName}
+                        courseName = {institutionProp.instituteCourseName}
+                        instituteSmallLogo = {institutionProp.institutionSmallLogo}
+                        worldRanking = {institutionProp. instituteWorldRanking}
+                        startDate = {institutionProp.instituteStartDate}
+                        entryScore = {institutionProp.instituteEntryScore}
+                        studyLevel = {institutionProp.instituteStudyLevel}
+                        location = {institutionProp.instituteLocation}
+                        cost = {institutionProp.instituteCourseCost}
+                        />
+                    </div>
                 </div>
             </div>
             <CarouselComponent CarouselImage = {carouselImage}/>
+            <RegardsComponent institutionName={institutionProp.institutionName}/>
+            
         </>
     )
 }
