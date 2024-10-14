@@ -9,7 +9,7 @@ interface StudentInfoProp extends institutionProp {
     aiGeneratedContent: string
 }
 
-const HeroBanner = ({
+const HeroBannerComponent = ({
     institutionName,
     instituteDestination,
     studentName,
@@ -48,4 +48,4 @@ const HeroBanner = ({
     )
 }
 
-export default HeroBanner
+export default HeroBannerComponent

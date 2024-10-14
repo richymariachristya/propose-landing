@@ -12,7 +12,7 @@ interface OfferCountdown extends InstitutionLogoProp {
     offercountSec: number
 }
 
-const OfferTimeline = ({
+const OfferTimelineComponent = ({
     institutionLogo,
     institutionName,
     institutionSite,
@@ -57,4 +57,4 @@ const OfferTimeline = ({
     )
 }
 
-export default OfferTimeline
+export default OfferTimelineComponent

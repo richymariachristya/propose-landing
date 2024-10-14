@@ -1,5 +1,5 @@
-import OfferTimeline from "@/components/OfferTimelineComponent"
-import HeroBanner from "@/components/HeroBannerComponent"
+import OfferTimelineComponent from "@/components/OfferTimelineComponent"
+import HeroBannerComponent from "@/components/HeroBannerComponent"
 import VideoComponent from "@/components/VideoComponent"
 import { useEffect, useState } from "react"
 import { getStudentInfo } from "@/service/api-service"
@@ -68,7 +68,7 @@ export default function ProposeLandingPage() {
                     <button onClick={closeDialog}>Close</button>
                 </Dialog>
             </div> */}
-            <OfferTimeline
+            <OfferTimelineComponent
                 institutionLogo={data?.institution_logo_url}
                 institutionName={institutionProp.institutionName}
                 institutionSite={institutionProp.institutionSite}
@@ -76,7 +76,7 @@ export default function ProposeLandingPage() {
                 offercountMin={OfferCountdownProp.offercountMin}
                 offercountSec={OfferCountdownProp.offercountSec}
             />
-            <HeroBanner
+            <HeroBannerComponent
                 studentName={data?.student_welcome_text}
                 studentProposeCourse={data?.course_name}
                 instituteDestination={institutionProp.instituteDestination}

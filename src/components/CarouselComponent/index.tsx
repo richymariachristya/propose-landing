@@ -9,6 +9,14 @@ const CarouselComponent = ({CarouselImage}:CarouselImageProp) => {
 
   const [CurrentIndex, setCurrentIndex] = useState(0);
 
+  const goToPrevSlide = ():void => {
+    setCurrentIndex(
+      (prevIndex)=> (prevIndex-1) % CarouselImage.length)
+  }
+  const goToNextSlide = ():void => {
+    setCurrentIndex(
+      (prevIndex)=> (prevIndex+1) % CarouselImage.length)
+  }
   const goToSlide = (index:number):void => {
     setCurrentIndex(index);
   }
@@ -28,6 +36,16 @@ const CarouselComponent = ({CarouselImage}:CarouselImageProp) => {
           </div>
         ))}
       </div>
+      {
+        <button className="absolute left-0 top-1/2"
+        onClick={goToPrevSlide}
+        >Prev</button>
+      }
+      {
+        <button className="absolute right-0 top-1/2"
+        onClick={goToNextSlide}
+        >Next</button>
+      }
       <div className="flex justify-center space-x-2 mt-4">
         {CarouselImage.map((_,index)=>(
             <button key={index} 
