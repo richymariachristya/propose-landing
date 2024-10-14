@@ -6,7 +6,7 @@ interface FooterResponse {
 interface FooterProps {
   footerResponse: FooterResponse;
 }
- const Footer = ({ footerResponse }:FooterProps) =>{
+ const FooterComponent = ({ footerResponse }:FooterProps) =>{
   return (
     <footer className="bg-neutral-50 container rounded-lg mx-auto"
     >
@@ -19,4 +19,4 @@ interface FooterProps {
     </footer>
   );
 };
-export default Footer
+export default FooterComponent

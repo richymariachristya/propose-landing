@@ -1,7 +1,7 @@
 import Head from "next/head"
 
 import Header from "@/components/header"
-import Footer from "@/components/FooterComponent"
+import FooterComponent from "../components/FooterComponent"
 import Content from "@/components/content"
 import ProposeLandingPage from "./home"
 
@@ -38,7 +38,7 @@ export default function Home() {
        </main> */}
 
             <ProposeLandingPage />
-            <Footer footerResponse={footerData}></Footer>
+            <FooterComponent footerResponse={footerData}></FooterComponent>
         </>
     )
 }

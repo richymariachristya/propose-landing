@@ -18,9 +18,9 @@ const nextConfig = {
                 },
                 filename: "static/chunks/remoteEntry.js",
                 exposes: {
-                    "./content": "./src/components/content/index.tsx",
-                    "./header": "./src/components/header/index.tsx",
-                    "./footer": "./src/components/footer/index.tsx",
+                    // "./content": "./src/components/content/index.tsx",
+                    // "./header": "./src/components/header/index.tsx",
+                    // "./footer": "./src/components/footer/index.tsx",
                 },
                 shared: {
                     // Share Tailwind and other common dependencies
