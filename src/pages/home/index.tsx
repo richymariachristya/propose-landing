@@ -83,7 +83,6 @@ export default function ProposeLandingPage() {
                 institutionLogo={data?.institution_logo_url}
                 institutionName={institutionProp.institutionName}
                 institutionSite={institutionProp.institutionSite}
-                courseName={institutionProp.instituteCourseName}
                 offercountHour={OfferCountdownProp.offercountHour}
                 offercountMin={OfferCountdownProp.offercountMin}
                 offercountSec={OfferCountdownProp.offercountSec}
