@@ -10,20 +10,20 @@ import AboutComponent from "@/components/AboutComponent"
 
 const institutionProp = {
     institutionLogo: "/images/unisq-logo.svg",
-    institutionSmallLogo:"/public/images/ins-logo-small.png"
+    institutionSmallLogo: "/public/images/ins-logo-small.png",
     institutionName: "University of Southern Queensland",
     institutionSite: "https://www.unisq.edu.au/",
     instituteVideoImage: "/images/video-image.png",
     instituteVideoUrl:
         "https://videos.ctfassets.net/8bbwomjfix8m/7lraOsI97RgFJk4cqQyXdP/11e4e785023049565bde19c3f062404d/Video_-1_Why_study_abroad.mp4",
     instituteDestination: "Australia",
-    instituteCourseName:"Course name",
-    instituteWorldRanking:"101",
-    instituteStartDate:"Jan 30, 2024",
-    instituteEntryScore:6.5,
-    instituteStudyLevel:"Masters degree",
-    instituteLocation:"Birmingham, UK",
-    instituteCourseCost:"£29,000"
+    instituteCourseName: "Course name",
+    instituteWorldRanking: 101,
+    instituteStartDate: "Jan 30, 2024",
+    instituteEntryScore: 6.5,
+    instituteStudyLevel: "Masters degree",
+    instituteLocation: "Birmingham, UK",
+    instituteCourseCost: 29,
 }
 
 const carouselImage = [
@@ -31,7 +31,7 @@ const carouselImage = [
     "https://via.placeholder.com/800x400.png?text=Slide+2",
     "https://via.placeholder.com/800x400.png?text=Slide+3",
     "https://via.placeholder.com/800x400.png?text=Slide+4",
-  ];
+]
 
 const StudentDetails = {
     studentName: "Neil",
@@ -83,7 +83,7 @@ export default function ProposeLandingPage() {
                 institutionLogo={data?.institution_logo_url}
                 institutionName={institutionProp.institutionName}
                 institutionSite={institutionProp.institutionSite}
-                courseName={institutionProp.courseName}
+                // courseName={institutionProp.courseName}
                 offercountHour={OfferCountdownProp.offercountHour}
                 offercountMin={OfferCountdownProp.offercountMin}
                 offercountSec={OfferCountdownProp.offercountSec}
@@ -109,22 +109,26 @@ export default function ProposeLandingPage() {
                         />
                     </div>
                     <div className="flex flex-col items-center lg:w-1/2 md:w-full lg:ml-10 md:mx-0 lg:justify-center">
-                        <AboutComponent institutionName = {institutionProp.institutionName}
-                        courseName = {institutionProp.instituteCourseName}
-                        instituteSmallLogo = {institutionProp.institutionSmallLogo}
-                        worldRanking = {institutionProp. instituteWorldRanking}
-                        startDate = {institutionProp.instituteStartDate}
-                        entryScore = {institutionProp.instituteEntryScore}
-                        studyLevel = {institutionProp.instituteStudyLevel}
-                        location = {institutionProp.instituteLocation}
-                        cost = {institutionProp.instituteCourseCost}
+                        <AboutComponent
+                            institutionName={institutionProp.institutionName}
+                            courseName={institutionProp.instituteCourseName}
+                            instituteSmallLogo={
+                                institutionProp.institutionSmallLogo
+                            }
+                            worldRanking={institutionProp.instituteWorldRanking}
+                            startDate={institutionProp.instituteStartDate}
+                            entryScore={institutionProp.instituteEntryScore}
+                            studyLevel={institutionProp.instituteStudyLevel}
+                            location={institutionProp.instituteLocation}
+                            cost={institutionProp.instituteCourseCost}
                         />
                     </div>
                 </div>
             </div>
-            <CarouselComponent CarouselImage = {carouselImage}/>
-            <RegardsComponent institutionName={institutionProp.institutionName}/>
-            
+            <CarouselComponent CarouselImage={carouselImage} />
+            <RegardsComponent
+                institutionName={institutionProp.institutionName}
+            />
         </>
     )
 }
