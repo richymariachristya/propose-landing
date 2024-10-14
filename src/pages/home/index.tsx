@@ -10,7 +10,7 @@ import AboutComponent from "@/components/AboutComponent"
 
 const institutionProp = {
     institutionLogo: "/images/unisq-logo.svg",
-    institutionSmallLogo:"/public/images/ins-logo-small.png"
+    institutionSmallLogo:"/images/ins-logo-small.png",
     institutionName: "University of Southern Queensland",
     institutionSite: "https://www.unisq.edu.au/",
     instituteVideoImage: "/images/video-image.png",
@@ -18,12 +18,12 @@ const institutionProp = {
         "https://videos.ctfassets.net/8bbwomjfix8m/7lraOsI97RgFJk4cqQyXdP/11e4e785023049565bde19c3f062404d/Video_-1_Why_study_abroad.mp4",
     instituteDestination: "Australia",
     instituteCourseName:"Course name",
-    instituteWorldRanking:"101",
-    instituteStartDate:"Jan 30, 2024",
+    instituteWorldRanking:101,
+    instituteStartDate:"Jan 30 2024",
     instituteEntryScore:6.5,
     instituteStudyLevel:"Masters degree",
     instituteLocation:"Birmingham, UK",
-    instituteCourseCost:"£29,000"
+    instituteCourseCost:29000
 }
 
 const carouselImage = [
@@ -83,7 +83,7 @@ export default function ProposeLandingPage() {
                 institutionLogo={data?.institution_logo_url}
                 institutionName={institutionProp.institutionName}
                 institutionSite={institutionProp.institutionSite}
-                courseName={institutionProp.courseName}
+                courseName={institutionProp.instituteCourseName}
                 offercountHour={OfferCountdownProp.offercountHour}
                 offercountMin={OfferCountdownProp.offercountMin}
                 offercountSec={OfferCountdownProp.offercountSec}
