@@ -4,6 +4,7 @@ import VideoComponent from "@/components/VideoComponent"
 import { useEffect, useState } from "react"
 import { getStudentInfo } from "@/service/api-service"
 import Dialog from "@/components/dialog"
+import CarouselComponent from "@/components/CarouselComponent"
 const institutionProp = {
     institutionLogo: "/images/unisq-logo.svg",
     institutionName: "University of Southern Queensland",
@@ -13,6 +14,13 @@ const institutionProp = {
         "https://videos.ctfassets.net/8bbwomjfix8m/7lraOsI97RgFJk4cqQyXdP/11e4e785023049565bde19c3f062404d/Video_-1_Why_study_abroad.mp4",
     instituteDestination: "Australia",
 }
+
+const carouselImage = [
+    "https://via.placeholder.com/800x400.png?text=Slide+1",
+    "https://via.placeholder.com/800x400.png?text=Slide+2",
+    "https://via.placeholder.com/800x400.png?text=Slide+3",
+    "https://via.placeholder.com/800x400.png?text=Slide+4",
+  ];
 
 const StudentDetails = {
     studentName: "Neil",
@@ -87,9 +95,10 @@ export default function ProposeLandingPage() {
                             }
                         />
                     </div>
-                    <div className="flex flex-col items-center lg:w-1/2 md:w-full lg:ml-10 md:mx-0 lg:justify-center"></div>
+                    <div className="flex flex-col items-center lg:w-1/2 md:w-full lg:ml-10 md:mx-0 lg:justify-center">hi</div>
                 </div>
             </div>
+            <CarouselComponent CarouselImage = {carouselImage}/>
         </>
     )
 }

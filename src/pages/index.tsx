@@ -1,7 +1,7 @@
 import Head from "next/head"
 
 import Header from "@/components/header"
-import Footer from "@/components/footer"
+import Footer from "@/components/FooterComponent"
 import Content from "@/components/content"
 import ProposeLandingPage from "./home"
 
