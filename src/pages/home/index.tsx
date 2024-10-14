@@ -31,7 +31,7 @@ const carouselImage = [
     "https://via.placeholder.com/800x400.png?text=Slide+2",
     "https://via.placeholder.com/800x400.png?text=Slide+3",
     "https://via.placeholder.com/800x400.png?text=Slide+4",
-  ];
+]
 
 const StudentDetails = {
     studentName: "Neil",
@@ -109,22 +109,26 @@ export default function ProposeLandingPage() {
                         />
                     </div>
                     <div className="flex flex-col items-center lg:w-1/2 md:w-full lg:ml-10 md:mx-0 lg:justify-center">
-                        <AboutComponent institutionName = {institutionProp.institutionName}
-                        courseName = {institutionProp.instituteCourseName}
-                        instituteSmallLogo = {institutionProp.institutionSmallLogo}
-                        worldRanking = {institutionProp. instituteWorldRanking}
-                        startDate = {institutionProp.instituteStartDate}
-                        entryScore = {institutionProp.instituteEntryScore}
-                        studyLevel = {institutionProp.instituteStudyLevel}
-                        location = {institutionProp.instituteLocation}
-                        cost = {institutionProp.instituteCourseCost}
+                        <AboutComponent
+                            institutionName={institutionProp.institutionName}
+                            courseName={institutionProp.instituteCourseName}
+                            instituteSmallLogo={
+                                institutionProp.institutionSmallLogo
+                            }
+                            worldRanking={institutionProp.instituteWorldRanking}
+                            startDate={institutionProp.instituteStartDate}
+                            entryScore={institutionProp.instituteEntryScore}
+                            studyLevel={institutionProp.instituteStudyLevel}
+                            location={institutionProp.instituteLocation}
+                            cost={institutionProp.instituteCourseCost}
                         />
                     </div>
                 </div>
             </div>
-            <CarouselComponent CarouselImage = {carouselImage}/>
-            <RegardsComponent institutionName={institutionProp.institutionName}/>
-            
+            <CarouselComponent CarouselImage={carouselImage} />
+            <RegardsComponent
+                institutionName={institutionProp.institutionName}
+            />
         </>
     )
 }
