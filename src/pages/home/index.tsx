@@ -23,7 +23,7 @@ const institutionProp = {
     instituteEntryScore: 6.5,
     instituteStudyLevel: "Masters degree",
     instituteLocation: "Birmingham, UK",
-    instituteCourseCost: 29000,
+    instituteCourseCost: "£29,000",
 }
 
 const carouselImage = [
@@ -125,9 +125,7 @@ export default function ProposeLandingPage() {
                 </div>
             </div>
             <CarouselComponent CarouselImage={carouselImage} />
-            <RegardsComponent
-                institutionName={institutionProp.institutionName}
-            />
+            <RegardsComponent institutionName={data?.institution_name} />
         </>
     )
 }
