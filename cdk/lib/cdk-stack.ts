@@ -29,7 +29,7 @@ export class CdkStack extends cdk.Stack {
 
         // Create an S3 bucket for static assets
         const myBucket = new s3.Bucket(this, "NewREWebSiteBucket", {
-            bucketName: "dev-propose-ap-southeast-1-bucket-v1",
+            bucketName: "dev-propose-next-ap-southeast-1-bucket-v1",
 
             // Replace with your desired name
             enforceSSL: true,
@@ -72,7 +72,7 @@ export class CdkStack extends cdk.Stack {
         cdk.Tags.of(myBucket).add("Classification", "sensitive")
         cdk.Tags.of(myBucket).add(
             "Name",
-            "dev-propose-ap-southeast-1-bucket-v1"
+            "dev-propose-next-ap-southeast-1-bucket-v1"
         )
         cdk.Tags.of(myBucket).add("ProjectName", "Propose")
 
