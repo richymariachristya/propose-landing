@@ -22,6 +22,9 @@ module.exports = {
         inter: ["Inter", "sans-serif"],
       },
       colors: {
+        white:{
+          50:"#fff",
+        },
         grey: {
           300: "#333",
           400: "#707070",

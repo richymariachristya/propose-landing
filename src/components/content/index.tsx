@@ -24,9 +24,9 @@ interface ContentProps {
 
           <p className="text-xl font-bold pb-5">Don&apos;t miss out on this incredible opportunity! Click the link below to learn more about the scholarship and how you can apply:</p>
           <div className="pb-10">
-          <button className="px-6 py-2 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition-all duration-300">Get offer in principle
+          <button className="px-6 py-2 bg-blue-600 text-white-50 font-bold rounded-md hover:bg-blue-700 transition-all duration-300">Get offer in principle
          </button>
-         <button className="px-6 py-2 bg-green-600 text-white font-bold rounded-md hover:bg-grey-700 transition-all duration-300">Not interested
+         <button className="px-6 py-2 bg-green-600 text-white-50 font-bold rounded-md hover:bg-grey-700 transition-all duration-300">Not interested
          </button>
          </div>
          

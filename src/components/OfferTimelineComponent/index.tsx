@@ -23,7 +23,7 @@ const OfferTimelineComponent = ({
     return (
         <>
             <div className="h-[40px] bg-secondary-500 flex justify-center py-[10px]">
-                <p className="text-white text-small">
+                <p className="text-white-50 text-small">
                     This proposal is valid until {offercountHour}h{" "}
                     {offercountMin}m {offercountSec}s. We encourage you to take
                     advantage of this offer before the deadline to ensure your

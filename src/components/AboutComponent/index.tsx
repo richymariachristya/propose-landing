@@ -54,7 +54,7 @@ const AboutComponent = ({
                     </div>
                     <div className="flex">
                         <a
-                            className="hover:underline no-underline text-primary-400 small font-inter font-semibold inline-flex"
+                            className="hover:underline no-underline text-primary-400 small font-inter font-semibold inline-flex items-center"
                             href="#">
                             View more{" "}
                             <Image
@@ -177,10 +177,10 @@ const AboutComponent = ({
                     </div>
                 </div>
                 <div className="flex gap-4">
-                    <button className="btn text-primary-400 border border-primary-400 w-[242px] h-[40px]">
+                    <button className="btn text-primary-400 bg-white-50 border border-primary-400 w-[242px] h-[40px] hover:text-white-50 hover:bg-primary-400 ">
                         Not interested
                     </button>
-                    <button className="btn bg-primary-400 text-white w-[242px] h-[40px]">
+                    <button className="btn border bg-primary-400 text-white-50 w-[242px] h-[40px] hover:text-primary-400 hover:bg-white-50 hover:border-primary-400">
                         Get offer in principle
                     </button>
                 </div>
