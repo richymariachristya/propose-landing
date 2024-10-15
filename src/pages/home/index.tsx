@@ -10,20 +10,20 @@ import AboutComponent from "@/components/AboutComponent"
 
 const institutionProp = {
     institutionLogo: "/images/unisq-logo.svg",
-    institutionSmallLogo:"/images/ins-logo-small.png",
+    institutionSmallLogo: "/images/ins-logo-small.png",
     institutionName: "University of Southern Queensland",
     institutionSite: "https://www.unisq.edu.au/",
     instituteVideoImage: "/images/video-image.png",
     instituteVideoUrl:
         "https://videos.ctfassets.net/8bbwomjfix8m/7lraOsI97RgFJk4cqQyXdP/11e4e785023049565bde19c3f062404d/Video_-1_Why_study_abroad.mp4",
     instituteDestination: "Australia",
-    instituteCourseName:"Course name",
-    instituteWorldRanking:101,
-    instituteStartDate:"Jan 30 2024",
-    instituteEntryScore:6.5,
-    instituteStudyLevel:"Masters degree",
-    instituteLocation:"Birmingham, UK",
-    instituteCourseCost:29000
+    instituteCourseName: "Course name",
+    instituteWorldRanking: 101,
+    instituteStartDate: "Jan 30 2024",
+    instituteEntryScore: 6.5,
+    instituteStudyLevel: "Masters degree",
+    instituteLocation: "Birmingham, UK",
+    instituteCourseCost: 29000,
 }
 
 const carouselImage = [
@@ -92,7 +92,7 @@ export default function ProposeLandingPage() {
                 studentProposeCourse={data?.course_name}
                 instituteDestination={institutionProp.instituteDestination}
                 institutionName={data?.institution_name}
-                aiGeneratedContent={data?.ai_course_text}
+                aiGeneratedContent={data?.why_this_course}
             />
             <div className="">
                 <div className="container flex lg:flex-row mx-auto md:flex-col md:gap-10">
