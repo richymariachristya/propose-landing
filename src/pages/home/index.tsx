@@ -46,9 +46,9 @@ const OfferCountdownProp = {
 
 const DialogComponentProp = {
     isOpen: true,
-    onClose:  () => {},
-    title:"",
-    children: ""
+    onClose: () => {},
+    title: "",
+    children: "",
 }
 
 export default function ProposeLandingPage() {
@@ -59,8 +59,8 @@ export default function ProposeLandingPage() {
     const closeDialog = () => setIsDialogOpen(false)
     const updatedDialogProp = {
         ...DialogComponentProp,
-        isOpen:openDialog,
-        onClose:closeDialog
+        isOpen: openDialog,
+        onClose: closeDialog,
     }
     const getUserProfileDetails = async () => {
         try {
@@ -81,69 +81,72 @@ export default function ProposeLandingPage() {
         //     const { token, campaign_id } = router.query;
         //     console.log(token, campaign_id)
         //   }
-        getUserProfileDetails()
+        // getUserProfileDetails()
     }, [])
     return (
         <div>
             <div>
-            <DialogComponent 
+                {/* <DialogComponent 
               isOpen = {updatedDialogProp.isOpen}
               onClose = {updatedDialogProp.onClose}
               title = {DialogComponentProp.title}
               children = {DialogComponentProp.children}
-              />
-            <OfferTimelineComponent
-                institutionLogo={data?.institution_logo_url}
-                institutionName={institutionProp.institutionName}
-                institutionSite={institutionProp.institutionSite}
-                offercountHour={OfferCountdownProp.offercountHour}
-                offercountMin={OfferCountdownProp.offercountMin}
-                offercountSec={OfferCountdownProp.offercountSec}
-            />
-            <HeroBannerComponent
-                studentName={data?.student_welcome_text}
-                studentProposeCourse={data?.course_name}
-                instituteDestination={institutionProp.instituteDestination}
-                institutionName={data?.institution_name}
-                aiGeneratedContent={data?.why_this_course}
-            />
-            <div className="">
-                <div className="container flex lg:flex-row mx-auto md:flex-col md:gap-10">
-                    <div className="flex flex-col items-center lg:w-1/2 md:w-full gap-4 lg:py-10 md:py-4">
-                        <VideoComponent
-                            institutionName={institutionProp.institutionName}
-                            instituteVideoImage={
-                                institutionProp.instituteVideoImage
-                            }
-                            instituteVideoUrl={
-                                institutionProp.instituteVideoUrl
-                            }
-                        />
-                    </div>
-                    <div className="flex flex-col items-center lg:w-1/2 md:w-full lg:ml-10 md:mx-0 lg:justify-center">
-                        <AboutComponent
-                            institutionName={institutionProp.institutionName}
-                            courseName={institutionProp.instituteCourseName}
-                            instituteSmallLogo={
-                                institutionProp.institutionSmallLogo
-                            }
-                            worldRanking={institutionProp.instituteWorldRanking}
-                            startDate={institutionProp.instituteStartDate}
-                            entryScore={institutionProp.instituteEntryScore}
-                            studyLevel={institutionProp.instituteStudyLevel}
-                            location={institutionProp.instituteLocation}
-                            cost={institutionProp.instituteCourseCost}
-                        />
+              /> */}
+                <OfferTimelineComponent
+                    institutionLogo={data?.institution_logo_url}
+                    institutionName={institutionProp.institutionName}
+                    institutionSite={institutionProp.institutionSite}
+                    offercountHour={OfferCountdownProp.offercountHour}
+                    offercountMin={OfferCountdownProp.offercountMin}
+                    offercountSec={OfferCountdownProp.offercountSec}
+                />
+                <HeroBannerComponent
+                    studentName={data?.student_welcome_text}
+                    studentProposeCourse={data?.course_name}
+                    instituteDestination={institutionProp.instituteDestination}
+                    institutionName={data?.institution_name}
+                    aiGeneratedContent={data?.why_this_course}
+                />
+                <div className="">
+                    <div className="container flex lg:flex-row mx-auto md:flex-col md:gap-10">
+                        <div className="flex flex-col items-center lg:w-1/2 md:w-full gap-4 lg:py-10 md:py-4">
+                            <VideoComponent
+                                institutionName={
+                                    institutionProp.institutionName
+                                }
+                                instituteVideoImage={
+                                    institutionProp.instituteVideoImage
+                                }
+                                instituteVideoUrl={
+                                    institutionProp.instituteVideoUrl
+                                }
+                            />
+                        </div>
+                        <div className="flex flex-col items-center lg:w-1/2 md:w-full lg:ml-10 md:mx-0 lg:justify-center">
+                            <AboutComponent
+                                institutionName={
+                                    institutionProp.institutionName
+                                }
+                                courseName={institutionProp.instituteCourseName}
+                                instituteSmallLogo={
+                                    institutionProp.institutionSmallLogo
+                                }
+                                worldRanking={
+                                    institutionProp.instituteWorldRanking
+                                }
+                                startDate={institutionProp.instituteStartDate}
+                                entryScore={institutionProp.instituteEntryScore}
+                                studyLevel={institutionProp.instituteStudyLevel}
+                                location={institutionProp.instituteLocation}
+                                cost={institutionProp.instituteCourseCost}
+                            />
+                        </div>
                     </div>
                 </div>
+                <CarouselComponent CarouselImage={carouselImage} />
+                <RegardsComponent institutionName={data?.institution_name} />
             </div>
-            <CarouselComponent CarouselImage={carouselImage} />
-            <RegardsComponent institutionName={data?.institution_name} />
-            </div>
-            <div>
-                new page
-            </div>
+            <div>new page</div>
         </div>
-        
     )
 }
