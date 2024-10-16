@@ -7,7 +7,7 @@ import DialogComponent from "@/components/DialogComponent"
 import CarouselComponent from "@/components/CarouselComponent"
 import RegardsComponent from "@/components/RegardsComponent"
 import AboutComponent from "@/components/AboutComponent"
-
+import { useRouter } from "next/router"
 const institutionProp = {
     institutionLogo: "/images/unisq-logo.svg",
     institutionSmallLogo: "/images/ins-logo-small.png",
@@ -53,6 +53,7 @@ const DialogComponentProp = {
 
 export default function ProposeLandingPage() {
     const [data, setData] = useState<any>()
+    const router = useRouter()
     const [isDialogOpen, setIsDialogOpen] = useState(false)
     const openDialog = () => setIsDialogOpen(true)
     const closeDialog = () => setIsDialogOpen(false)
@@ -76,6 +77,10 @@ export default function ProposeLandingPage() {
         }
     }
     useEffect(() => {
+        // if (router.isReady) {
+        //     const { token, campaign_id } = router.query;
+        //     console.log(token, campaign_id)
+        //   }
         getUserProfileDetails()
     }, [])
     return (
