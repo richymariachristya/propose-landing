@@ -79,7 +79,8 @@ export default function ProposeLandingPage() {
         getUserProfileDetails()
     }, [])
     return (
-        <>
+        <div>
+            <div>
             <DialogComponent 
               isOpen = {updatedDialogProp.isOpen}
               onClose = {updatedDialogProp.onClose}
@@ -133,6 +134,11 @@ export default function ProposeLandingPage() {
             </div>
             <CarouselComponent CarouselImage={carouselImage} />
             <RegardsComponent institutionName={data?.institution_name} />
-        </>
+            </div>
+            <div>
+                new page
+            </div>
+        </div>
+        
     )
 }
