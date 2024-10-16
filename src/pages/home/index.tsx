@@ -81,7 +81,7 @@ export default function ProposeLandingPage() {
         //     const { token, campaign_id } = router.query;
         //     console.log(token, campaign_id)
         //   }
-        // getUserProfileDetails()
+        getUserProfileDetails()
     }, [])
     return (
         <div>
