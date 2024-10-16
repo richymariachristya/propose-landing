@@ -1,19 +1,14 @@
 // components/Dialog.tsx  For development purpose later will remove this file
 import React from "react"
 
-interface DialogProps {
-    isOpen: boolean
+interface DialogComponentProp {
+    isOpen: () => void
     onClose: () => void
     title: string
     children: React.ReactNode
 }
 
-const Dialog: React.FC<DialogProps> = ({
-    isOpen,
-    onClose,
-    title,
-    children,
-}) => {
+const DialogComponent = ({isOpen,onClose,title,children}:DialogComponentProp) => {
     if (!isOpen) return null // If the dialog is not open, return null.
 
     return (
@@ -54,4 +49,4 @@ const Dialog: React.FC<DialogProps> = ({
     )
 }
 
-export default Dialog
+export default DialogComponent

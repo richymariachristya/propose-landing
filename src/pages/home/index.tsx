@@ -3,7 +3,7 @@ import HeroBannerComponent from "@/components/HeroBannerComponent"
 import VideoComponent from "@/components/VideoComponent"
 import { useEffect, useState } from "react"
 import { getStudentInfo } from "@/service/api-service"
-import Dialog from "@/components/dialog"
+import DialogComponent from "@/components/DialogComponent"
 import CarouselComponent from "@/components/CarouselComponent"
 import RegardsComponent from "@/components/RegardsComponent"
 import AboutComponent from "@/components/AboutComponent"
@@ -44,11 +44,23 @@ const OfferCountdownProp = {
     offercountSec: 20,
 }
 
+const DialogComponentProp = {
+    isOpen: true,
+    onClose:  () => {},
+    title:"",
+    children: ""
+}
+
 export default function ProposeLandingPage() {
     const [data, setData] = useState<any>()
     const [isDialogOpen, setIsDialogOpen] = useState(false)
     const openDialog = () => setIsDialogOpen(true)
     const closeDialog = () => setIsDialogOpen(false)
+    const updatedDialogProp = {
+        ...DialogComponentProp,
+        isOpen:openDialog,
+        onClose:closeDialog
+    }
     const getUserProfileDetails = async () => {
         try {
             let payload = {
@@ -79,6 +91,12 @@ export default function ProposeLandingPage() {
                     <button onClick={closeDialog}>Close</button>
                 </Dialog>
             </div> */}
+            <DialogComponent 
+              isOpen = {updatedDialogProp.isOpen}
+              onClose = {updatedDialogProp.onClose}
+              title = {DialogComponentProp.title}
+              children = {DialogComponentProp.children}
+              />
             <OfferTimelineComponent
                 institutionLogo={data?.institution_logo_url}
                 institutionName={institutionProp.institutionName}
