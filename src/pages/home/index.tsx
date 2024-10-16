@@ -80,17 +80,6 @@ export default function ProposeLandingPage() {
     }, [])
     return (
         <>
-            {/* <div>
-                <h1>Welcome to My Next.js App!</h1>
-                <button onClick={openDialog}>Open Dialog</button>
-                <Dialog
-                    isOpen={isDialogOpen}
-                    onClose={closeDialog}
-                    title="My Dialog">
-                    <p>This is a simple dialog box.</p>
-                    <button onClick={closeDialog}>Close</button>
-                </Dialog>
-            </div> */}
             <DialogComponent 
               isOpen = {updatedDialogProp.isOpen}
               onClose = {updatedDialogProp.onClose}
