@@ -8,18 +8,14 @@ interface InstitutionLogoProp {
     institutionSite: string
 }
 interface OfferCountdown extends InstitutionLogoProp {
-    offercountHour: number
-    offercountMin: number
-    offercountSec: number
+    expirydate: string
 }
 
 const OfferTimelineComponent = ({
     institutionLogo,
     institutionName,
     institutionSite,
-    offercountHour,
-    offercountMin,
-    offercountSec,
+    expirydate,
 }: OfferCountdown) => {
     const [timeRemaining, setTimeRemaining] = useState({
         hours: 0,
@@ -28,7 +24,7 @@ const OfferTimelineComponent = ({
     })
 
     useEffect(() => {
-        const expirationDate = new Date("2024-10-20T16:33:00Z").getTime()
+        const expirationDate = new Date(expirydate.toString()).getTime()
 
         const updateCountdown = () => {
             const currentTime = new Date().getTime()
