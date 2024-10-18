@@ -9,6 +9,7 @@ import blueRightArrow from "../../../public/icons/blue-right-arrow.svg"
 
 interface AboutComponentProp {
     openDialog: any
+    closeDialog: any
     institutionName: string
     courseName: string
     instituteSmallLogo: string
@@ -22,6 +23,7 @@ interface AboutComponentProp {
 
 const AboutComponent = ({
     openDialog,
+    closeDialog,
     institutionName,
     courseName,
     instituteSmallLogo,
@@ -68,6 +70,13 @@ const AboutComponent = ({
                     </label>
                 </div>
             </div>
+            <div className="my-4 w-full flex justify-center mt-[100px]">
+                <button
+                    className="btn border bg-primary-400 text-white-50 w-[242px] h-[40px] hover:text-primary-400 hover:bg-white-50 hover:border-primary-400"
+                    onClick={() => closeDialog()}>
+                    Submit
+                </button>
+            </div>
         </div>
     )
     const oipContent = (
@@ -101,6 +110,13 @@ const AboutComponent = ({
                     admission to this university. A formal offer may have
                     conditions attached.
                 </p>
+            </div>
+            <div className="my-4 w-full flex justify-center mt-[100px]">
+                <button
+                    className="btn border bg-primary-400 text-white-50 w-[242px] h-[40px] hover:text-primary-400 hover:bg-white-50 hover:border-primary-400"
+                    onClick={() => closeDialog()}>
+                    Submit
+                </button>
             </div>
         </div>
     )

@@ -6,8 +6,13 @@ interface FooterResponse {
 interface FooterProps {
     footerResponse: FooterResponse
     openDialog: any
+    closeDialog: any
 }
-const FooterComponent = ({ footerResponse, openDialog }: FooterProps) => {
+const FooterComponent = ({
+    footerResponse,
+    openDialog,
+    closeDialog,
+}: FooterProps) => {
     const unSubscribeContent = (
         <div className="w-[600px] h-[auto] mx-auto">
             <div className="text-center flex flex-col gap-4">
@@ -42,6 +47,13 @@ const FooterComponent = ({ footerResponse, openDialog }: FooterProps) => {
                         Already accepted an offer from another institution
                     </label>
                 </div>
+            </div>
+            <div className="my-4 w-full flex justify-center mt-[100px]">
+                <button
+                    className="btn border bg-primary-400 text-white-50 w-[242px] h-[40px] hover:text-primary-400 hover:bg-white-50 hover:border-primary-400"
+                    onClick={() => closeDialog()}>
+                    Submit
+                </button>
             </div>
         </div>
     )

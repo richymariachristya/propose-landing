@@ -140,6 +140,7 @@ export default function ProposeLandingPage() {
                                     (res: any, index: any) => (
                                         <AboutComponent
                                             openDialog={openDialog}
+                                            closeDialog={closeDialog}
                                             institutionName={
                                                 res.institution_name
                                             }
@@ -164,6 +165,7 @@ export default function ProposeLandingPage() {
                 )}
                 <RegardsComponent institutionName={data?.institution_name} />
                 <FooterComponent
+                    closeDialog={closeDialog}
                     openDialog={openDialog}
                     footerResponse={footerData}></FooterComponent>
             </div>
