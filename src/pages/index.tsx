@@ -1,5 +1,5 @@
 import Head from "next/head"
-import ProposeLandingPage from "./propose"
+import ProposeLandingPage from "./propose/[campaignId]"
 
 export default function Home() {
     const footerData = {
