@@ -14,7 +14,7 @@ const FooterComponent = ({
     closeDialog,
 }: FooterProps) => {
     const unSubscribeContent = (
-        <div className="w-[600px] h-[auto] mx-auto">
+        <div className="w-[450px] h-[auto] mx-auto">
             <div className="text-center flex flex-col gap-4">
                 <h1 className="font-farro font-bold heading1">
                     We are sorry to hear that
