@@ -3,152 +3,178 @@
 @tailwind utilities;
 
 @layer base {
-/* Font farro starts*/
-@font-face {
-  font-family: "Farro";
-  src:
-    url("/public/fonts/Farro-Medium.woff2") format("woff2"),
-    url("/public/fonts/Farro-Medium.woff") format("woff");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 500;
-}
+    /* Font farro starts*/
+    @font-face {
+        font-family: "Farro";
+        src: url("/public/fonts/Farro-Medium.woff2") format("woff2"),
+            url("/public/fonts/Farro-Medium.woff") format("woff");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 500;
+    }
 
-@font-face {
-  font-family: "Farro";
-  src:
-    url("../../public/fonts/Farro-Bold.woff2") format("woff2"),
-    url("../../public/fonts/Farro-Bold.woff") format("woff");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 700;
-}
-/* Font farro ends*/
-/* inter starts*/
-@font-face {
-  font-family: "Inter";
-  src:
-    url("../../public/fonts/Inter-Regular.woff2") format("woff2"),
-    url("../../public/fonts/Inter-Regular.woff") format("woff");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Inter";
-  src:
-    url("../../public/fonts/Inter-SemiBold.woff2") format("woff2"),
-    url("../../public/fonts/Inter-SemiBold.woff") format("woff");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Inter";
-  src:
-    url("../../public/fonts/Inter-Bold.woff2") format("woff2"),
-    url("../../public/fonts/Inter-Bold.woff") format("woff");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 700;
-}
-/* inter ends*/ 
+    @font-face {
+        font-family: "Farro";
+        src: url("/fonts/Farro-Bold.woff2") format("woff2"),
+            url("/fonts/Farro-Bold.woff") format("woff");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 700;
+    }
+    /* Font farro ends*/
+    /* inter starts*/
+    @font-face {
+        font-family: "Inter";
+        src: url("/fonts/Inter-Regular.woff2") format("woff2"),
+            url("/fonts/Inter-Regular.woff") format("woff");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: "Inter";
+        src: url("/fonts/Inter-SemiBold.woff2") format("woff2"),
+            url("/fonts/Inter-SemiBold.woff") format("woff");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 600;
+    }
+    @font-face {
+        font-family: "Inter";
+        src: url("/fonts/Inter-Bold.woff2") format("woff2"),
+            url("/fonts/Inter-Bold.woff") format("woff");
+        font-display: swap;
+        font-style: normal;
+        font-weight: 700;
+    }
+    /* inter ends*/
 }
 
 @layer components {
-  .btn {
-    @apply font-semibold small text-neutral-50 rounded-[24px] px-[16px] py-[8px];
-  }
+    .btn {
+        @apply font-semibold small text-neutral-50 rounded-[24px] px-[16px] py-[8px];
+    }
 
-  .btn-primary {
-    @apply bg-primary-400 hover:bg-primary-500;
-  }
+    .btn-primary {
+        @apply bg-primary-400 hover:bg-primary-500;
+    }
 
-  .btn-primary {
-    @apply bg-secondary-400 hover:bg-secondary-500;
-  }
+    .btn-primary {
+        @apply bg-secondary-400 hover:bg-secondary-500;
+    }
 
-  .btn-neutral-outline {
-    @apply bg-transparent border-primary-400 text-neutral-900 border rounded-[20px] px-[12px] py-[7px] hover:bg-primary-500 hover:text-white font-semibold select-none;
-  }
+    .btn-neutral-outline {
+        @apply bg-transparent border-primary-400 text-neutral-900 border rounded-[20px] px-[12px] py-[7px] hover:bg-primary-500 hover:text-white font-semibold select-none;
+    }
 
-  .btn-secondary-outline {
-    @apply bg-transparent border-secondary-500 text-secondary-500 border rounded-[24px] px-[16px] py-[7px] hover:bg-secondary-500 hover:text-white font-semibold
-  }
+    .btn-secondary-outline {
+        @apply bg-transparent border-secondary-500 text-secondary-500 border rounded-[24px] px-[16px] py-[7px] hover:bg-secondary-500 hover:text-white font-semibold;
+    }
 
-/* scrollbar styles */
-  .scrollbar-hidden{scrollbar-width:none}
-  .scrollbar-hidden::-webkit-scrollbar{display:none;width:0!important;height:0!important;-webkit-appearance:none;background:transparent}
-  .custom-vertical-scrollbar::-webkit-scrollbar{@apply w-[5px]}
-  .custom-vertical-scrollbar::-webkit-scrollbar-track{@apply bg-transparent my-[8px]}
-  .custom-vertical-scrollbar::-webkit-scrollbar-thumb{@apply bg-neutral-200 hover:bg-neutral-200 rounded-[10px]}
-  /* .error p{@apply text-error-500}
+    /* scrollbar styles */
+    .scrollbar-hidden {
+        scrollbar-width: none;
+    }
+    .scrollbar-hidden::-webkit-scrollbar {
+        display: none;
+        width: 0 !important;
+        height: 0 !important;
+        -webkit-appearance: none;
+        background: transparent;
+    }
+    .custom-vertical-scrollbar::-webkit-scrollbar {
+        @apply w-[5px];
+    }
+    .custom-vertical-scrollbar::-webkit-scrollbar-track {
+        @apply bg-transparent my-[8px];
+    }
+    .custom-vertical-scrollbar::-webkit-scrollbar-thumb {
+        @apply bg-neutral-200 hover:bg-neutral-200 rounded-[10px];
+    }
+    /* .error p{@apply text-error-500}
   .success p{@apply text-success-500} */
- }
+}
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 body {
-  @apply font-inter font-normal text-para;
+    @apply font-inter font-normal text-para;
 }
 
 /* typograpy */
-h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{@apply font-farro;letter-spacing: -0.02rem}
-.h1-lg {@apply text-heading-lg}
-h1,.h1 {@apply text-heading2 lg:text-heading1}
-h2,.h2 {@apply text-heading3 lg:text-heading2}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    @apply font-farro;
+    letter-spacing: -0.02rem;
+}
+.h1-lg {
+    @apply text-heading-lg;
+}
+h1,
+.h1 {
+    @apply text-heading2 lg:text-heading1;
+}
+h2,
+.h2 {
+    @apply text-heading3 lg:text-heading2;
+}
 
 h3,
 .h3 {
-  @apply text-heading4 lg:text-heading3;
+    @apply text-heading4 lg:text-heading3;
 }
 
 h4,
 .h4 {
-  @apply text-heading5 lg:text-heading4;
+    @apply text-heading5 lg:text-heading4;
 }
 
 h5,
 .h5 {
-  @apply text-heading6 lg:text-heading5;
+    @apply text-heading6 lg:text-heading5;
 }
 
 h6,
 .h6 {
-  @apply text-para-lg lg:text-heading6;
+    @apply text-para-lg lg:text-heading6;
 }
 
 .para-lg {
-  @apply text-para-lg;
+    @apply text-para-lg;
 }
 
 p,
 .para {
-  @apply text-para;
+    @apply text-para;
 }
 
 .small {
-  @apply text-small;
+    @apply text-small;
 }
 
 .x-small {
-  @apply text-x-small;
+    @apply text-x-small;
 }
-.container{
-  max-width: 1200px;
+.container {
+    max-width: 1200px;
 }
 /* typograpy */
 
-@layer utilities {}
-
-@media screen and (max-width: 767px) {
-  .adviceCourseSlider{@apply !px-[0] !py-[16px]}
+@layer utilities {
 }
 
-
-
-
-
-
-
-
+@media screen and (max-width: 767px) {
+    .adviceCourseSlider {
+        @apply !px-[0] !py-[16px];
+    }
+}
