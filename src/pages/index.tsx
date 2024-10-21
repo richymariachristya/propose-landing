@@ -1,11 +1,7 @@
 import Head from "next/head"
-
-import Header from "@/components/header"
-import Content from "@/components/content"
-import ProposeLandingPage from "./home"
+import ProposeLandingPage from "./propose/[campaignId]"
 
 export default function Home() {
-
     const headerData = {
         studentName: "Hari",
     }
@@ -27,11 +23,6 @@ export default function Home() {
                 />
                 <link rel="icon" type="image/x-icon" href="/fav-icon.png" />
             </Head>
-            {/* <Header headerResponse={headerData}></Header>
-      <main>
-        <Content contentResponse={contentData}></Content>
-       </main> */}
-
             <ProposeLandingPage />
         </>
     )

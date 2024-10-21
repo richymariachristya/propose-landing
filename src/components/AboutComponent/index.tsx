@@ -8,6 +8,8 @@ import CreditCard from "../../../public/icons/creditCard-black.svg"
 import blueRightArrow from "../../../public/icons/blue-right-arrow.svg"
 
 interface AboutComponentProp {
+    openDialog: any
+    closeDialog: any
     institutionName: string
     courseName: string
     instituteSmallLogo: string
@@ -20,6 +22,8 @@ interface AboutComponentProp {
 }
 
 const AboutComponent = ({
+    openDialog,
+    closeDialog,
     institutionName,
     courseName,
     instituteSmallLogo,
@@ -30,6 +34,92 @@ const AboutComponent = ({
     location,
     cost,
 }: AboutComponentProp) => {
+    // Title and content to pass to the Dialog
+    const notInterestedContent = (
+        <div className="w-[450px] h-[auto] mx-auto">
+            <div className="text-center flex flex-col gap-4">
+                <h1 className="font-farro font-bold heading1">
+                    We are sorry to hear that
+                </h1>
+                <h6 className="font-farro italic para">
+                    Thank you for letting us know. We’d appreciate it if you
+                    could share a bit more about why you’re not interested in
+                    this proposal. Your feedback helps us improve our offerings.{" "}
+                </h6>
+                <p className="mt-6 para-lg">
+                    Hey{" "}
+                    <span className="para-lg font-bold">
+                        {/* {StudentDetails.studentName} */}
+                    </span>
+                </p>
+                <p className="text-center">
+                    Enabling students to choose applicable reason for their
+                    rejection of proposal.
+                </p>
+            </div>
+            <div>
+                {/* checkbox  */}
+                <div className="flex justify-start m-2 mb-6">
+                    <input
+                        id="Checkbox type 1"
+                        type="checkbox"
+                        className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-4"
+                    />
+                    <label htmlFor="disabled" className="para font-inter">
+                        Course not aligned with my interests
+                    </label>
+                </div>
+            </div>
+            <div className="my-4 w-full flex justify-center mt-[100px]">
+                <button
+                    className="btn border bg-primary-400 text-white-50 w-[242px] h-[40px] hover:text-primary-400 hover:bg-white-50 hover:border-primary-400"
+                    onClick={() => closeDialog()}>
+                    Submit
+                </button>
+            </div>
+        </div>
+    )
+    const oipContent = (
+        <div className="w-[450px] h-[auto] mx-auto">
+            <div className="text-center flex flex-col gap-4">
+                <h1 className="font-farro font-bold heading1">
+                    Congratulations!!!
+                </h1>
+                <h6 className="font-farro italic para">
+                    You are One step Closer to studying your dream cours﻿e
+                </h6>
+                <p className="mt-6 para-lg">
+                    Hey{" "}
+                    <span className="para-lg font-bold">
+                        {/* {StudentDetails.studentName} */}
+                    </span>
+                </p>
+                <p className="text-center">
+                    {" "}
+                    Based on the details you gave us, you are eligible
+                    {/* for the {institutionProp.instituteCourseName}{" "}
+                {institutionProp.institutionName} of{" "}
+                {institutionProp.instituteLocation}. They would like */}
+                    to give you an offer in principle (ID No.
+                    OIP-20240327-280990) for this course starting Semester 1
+                    (September), 2024 on 16.09.2024 at the City Campus with some
+                    additional conditions. What is an "offer in principle"? An
+                    offer in principle is an indication from the institution
+                    that they're interested in your application, based on the
+                    information you've supplied.It is not a formal offer of
+                    admission to this university. A formal offer may have
+                    conditions attached.
+                </p>
+            </div>
+            <div className="my-4 w-full flex justify-center mt-[100px]">
+                <button
+                    className="btn border bg-primary-400 text-white-50 w-[242px] h-[40px] hover:text-primary-400 hover:bg-white-50 hover:border-primary-400"
+                    onClick={() => closeDialog()}>
+                    Submit
+                </button>
+            </div>
+        </div>
+    )
     return (
         <div className="container mx-auto">
             <h5 className="text-grey-300 font-farro font-bold mb-5">
@@ -81,7 +171,7 @@ const AboutComponent = ({
                                 THE World ranking
                             </p>
                             <p className="x-small text-grey-900 font-normal">
-                                {worldRanking}st
+                                {worldRanking}
                             </p>
                         </div>
                     </div>
@@ -153,7 +243,7 @@ const AboutComponent = ({
                                 Entry score
                             </p>
                             <p className="x-small text-grey-900 font-normal">
-                                IELTS{entryScore}
+                                {entryScore}
                             </p>
                         </div>
                     </div>
@@ -177,10 +267,14 @@ const AboutComponent = ({
                     </div>
                 </div>
                 <div className="flex gap-4">
-                    <button className="btn text-primary-400 bg-white-50 border border-primary-400 w-[242px] h-[40px] hover:text-white-50 hover:bg-primary-400 ">
+                    <button
+                        className="btn text-primary-400 bg-white-50 border border-primary-400 w-[242px] h-[40px] hover:text-white-50 hover:bg-primary-400 "
+                        onClick={() => openDialog(notInterestedContent)}>
                         Not interested
                     </button>
-                    <button className="btn border bg-primary-400 text-white-50 w-[242px] h-[40px] hover:text-primary-400 hover:bg-white-50 hover:border-primary-400">
+                    <button
+                        className="btn border bg-primary-400 text-white-50 w-[242px] h-[40px] hover:text-primary-400 hover:bg-white-50 hover:border-primary-400"
+                        onClick={() => openDialog(oipContent)}>
                         Get offer in principle
                     </button>
                 </div>
