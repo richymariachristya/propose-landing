@@ -3,7 +3,7 @@ import ProposeLandingPage from "./propose/[campaignId]"
 
 export default function Home() {
     const headerData = {
-        studentName: "Hari",
+        studentName: "Neil",
     }
     const contentData = {
         universityName: "RMIT",
