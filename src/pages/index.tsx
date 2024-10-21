@@ -2,11 +2,6 @@ import Head from "next/head"
 import ProposeLandingPage from "./propose/[campaignId]"
 
 export default function Home() {
-    const footerData = {
-        additionalResources:
-            "Links to the university's social media, blog, and other relevant pages",
-        contactInformation: "Phone number, and office hours",
-    }
     const headerData = {
         studentName: "Hari",
     }
