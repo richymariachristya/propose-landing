@@ -72,7 +72,6 @@ export default function ProposeLandingPage() {
     }
     useEffect(() => {
         if (campaignId && token) {
-            console.log(campaignId)
             getUserProfileDetails()
         }
     }, [campaignId, token])
