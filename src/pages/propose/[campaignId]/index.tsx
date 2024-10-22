@@ -61,7 +61,10 @@ export default function ProposeLandingPage() {
                 setLoading(false)
                 setData(res.message)
                 setProposalStatus(
-                    res.message.proposal_status === "none" ? false : true
+                    res.message.proposal_status === "Accepted" ||
+                        res.message.proposal_status === "Rejected"
+                        ? false
+                        : true
                 )
             })
         } catch (error) {
@@ -175,29 +178,79 @@ export default function ProposeLandingPage() {
                             <Image src={IdpLogo} alt="Idp Logo" />
                         </div>
                         <div className="w-[600px] h-[auto] mx-auto">
-                            <div className="text-center flex flex-col gap-4">
-                                <h1 className="font-farro font-bold heading1">
-                                    Oops! It looks like your proposal pa﻿ge has
-                                    expired.
-                                </h1>
-
-                                <p className="mt-6 para-lg">
-                                    Hey{" "}
-                                    <span className="para-lg font-bold">
-                                        {StudentDetails.studentName}
-                                    </span>
-                                </p>
-                                <p className="text-center">
-                                    {" "}
-                                    To maintain the most accurate and relevant
-                                    information, proposals are only available
-                                    for a limited time.
-                                </p>
-                            </div>
+                            {data?.proposal_status === "Accepted" && (
+                                <div className="text-center flex flex-col gap-4">
+                                    <h1 className="font-farro font-bold heading1">
+                                        You have already accepted the Proposal
+                                    </h1>
+                                    <p className="mt-6 para-lg">
+                                        Hey{" "}
+                                        <span className="para-lg font-bold">
+                                            {data?.student_name}
+                                        </span>
+                                    </p>
+                                    <p className="text-center">
+                                        {" "}
+                                        Expect a call from our counsellor soon !
+                                    </p>
+                                </div>
+                            )}
+                            {data?.proposal_status !== "Accepted" && (
+                                <div className="text-center flex flex-col gap-4">
+                                    {data?.proposal_status === "Rejected" && (
+                                        <>
+                                            <h1 className="font-farro font-bold heading1">
+                                                Welcome back! Last time you
+                                                declined the proposal
+                                            </h1>
+                                            <p className="text-center">
+                                                {" "}
+                                                Welcome back! Last time, you
+                                                declined the proposal. If you
+                                                have any questions or would like
+                                                to discuss options, feel free to
+                                                connect with a counselor."
+                                            </p>
+                                        </>
+                                    )}
+                                    {data?.proposalStatus ===
+                                        "Unsubscribed" && (
+                                        <>
+                                            <h1 className="font-farro font-bold heading1">
+                                                Welcome back! You previously
+                                                unsubscribed from communications
+                                            </h1>{" "}
+                                            <p className="text-center">
+                                                {" "}
+                                                Welcome back! You previously
+                                                unsubscribed from
+                                                communications. Would you like
+                                                to update your preferences or
+                                                connect with a counselor?
+                                            </p>
+                                        </>
+                                    )}
+                                    {data?.proposalStatus === "Expired" && (
+                                        <>
+                                            <h1 className="font-farro font-bold heading1">
+                                                Oops! It looks like your
+                                                proposal pa﻿ge has expired.
+                                            </h1>{" "}
+                                            <p className="text-center">
+                                                {" "}
+                                                To maintain the most accurate
+                                                and relevant information,
+                                                proposals are only available for
+                                                a limited time.
+                                            </p>
+                                        </>
+                                    )}
+                                </div>
+                            )}
                         </div>
                         <div className="my-4 w-full flex justify-center mt-[100px]">
                             <button className="btn border bg-primary-400 text-white-50 w-[242px] h-[40px] hover:text-primary-400 hover:bg-white-50 hover:border-primary-400">
-                                Submit
+                                Close
                             </button>
                         </div>
                     </div>
