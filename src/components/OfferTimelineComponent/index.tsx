@@ -55,8 +55,8 @@ const OfferTimelineComponent = ({
     }, [])
     return (
         <>
-            <div className="h-[40px] bg-secondary-500 flex justify-center py-[10px]">
-                <p className="text-white-50 text-small">
+            <div className="md:h-[40px] bg-secondary-500 flex justify-center md:py-[10px] py-[8px] px-[16px]">
+                <p className="text-white-50 text-small h-auto text-center">
                     This proposal is valid until{" "}
                     {`${timeRemaining.hours.toString().padStart(2, "0")}`}h{" "}
                     {`${timeRemaining.minutes.toString().padStart(2, "0")}`}m{" "}

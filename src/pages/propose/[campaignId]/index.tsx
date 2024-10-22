@@ -116,8 +116,8 @@ export default function ProposeLandingPage() {
                             aiGeneratedContent={data?.why_this_course}
                         />
                         <div className="">
-                            <div className="container flex lg:flex-row mx-auto md:flex-col md:gap-10">
-                                <div className="flex flex-col items-center lg:w-1/2 md:w-full gap-4 lg:py-10 md:py-4">
+                            <div className="container flex md:flex-row mx-auto flex-col gap-[12px] md:gap-[40px]">
+                                <div className="flex flex-col items-center md:w-1/2 w-full px-[16px] pt-[16px] h-[230px] md:h-[374px] md:py-[32px] md:px-[0px]">
                                     <VideoComponent
                                         institutionName={
                                             institutionProp.institutionName
@@ -130,7 +130,7 @@ export default function ProposeLandingPage() {
                                         }
                                     />
                                 </div>
-                                <div className="flex flex-col items-center lg:w-1/2 md:w-full lg:ml-10 md:mx-0 lg:justify-center">
+                                <div className="flex flex-col items-center md:w-1/2 w-full md:justify-center">
                                     {data &&
                                         data?.course_details.map(
                                             (res: any, index: any) => (

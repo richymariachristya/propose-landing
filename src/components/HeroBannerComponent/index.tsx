@@ -18,8 +18,8 @@ const HeroBannerComponent = ({
 }: StudentInfoProp) => {
     return (
         <div className="bg-primary-400">
-            <div className="container flex lg:flex-row mx-auto md:flex-col md:gap-10">
-                <div className="flex flex-col items-center lg:w-1/2 md:w-full gap-4 lg:py-10 md:py-4">
+            <div className="container flex md:flex-row mx-auto flex-col gap-[40px] md:py-[40px] px-[16px] py-[32px]">
+                <div className="flex flex-col items-center lg:w-1/2 md:w-full gap-4">
                     <h3 className="font-farro font-bold text-white-50 text-left w-full">
                         Hi {studentName},
                     </h3>
