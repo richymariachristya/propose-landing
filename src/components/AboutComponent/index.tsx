@@ -121,15 +121,15 @@ const AboutComponent = ({
         </div>
     )
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto py-[24px] md:px-[39px] px-[16px]">
             <h5 className="text-grey-300 font-farro font-bold mb-5">
                 About the course
             </h5>
-            <div className="p-6 bg-neutral-50 border border-neutral-200 rounded-lg gap-5 flex flex-col">
-                <div className="flex justify-between content-center">
-                    <div className="flex gap-3 items-center">
+            <div className="p-[16px] bg-neutral-50 border border-neutral-200 rounded-lg gap-[16px] flex flex-col">
+                <div className="flex justify-between md:content-center items-start">
+                    <div className="flex gap-[16px] md:items-center flex-col md:flex-row items-start">
                         <Image
-                            className="rounded-md h-[56] w-[56]"
+                            className="rounded-md h-[56px] w-[56px] bg-white-50 shadow-md"
                             src={instituteSmallLogo}
                             alt={institutionName}
                             width={56}
@@ -266,14 +266,14 @@ const AboutComponent = ({
                         </div>
                     </div>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-[16px]">
                     <button
-                        className="btn text-primary-400 bg-white-50 border border-primary-400 w-[242px] h-[40px] hover:text-white-50 hover:bg-primary-400 "
+                        className="btn text-primary-400 bg-white-50 border border-primary-400 md:w-[242px] h-[40px] hover:text-white-50 hover:bg-primary-400 "
                         onClick={() => openDialog(notInterestedContent)}>
                         Not interested
                     </button>
                     <button
-                        className="btn border bg-primary-400 text-white-50 w-[242px] h-[40px] hover:text-primary-400 hover:bg-white-50 hover:border-primary-400"
+                        className="btn border bg-primary-400 text-white-50 md:w-[242px] h-[40px] hover:text-primary-400 hover:bg-white-50 hover:border-primary-400"
                         onClick={() => openDialog(oipContent)}>
                         Get offer in principle
                     </button>

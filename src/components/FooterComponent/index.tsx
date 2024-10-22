@@ -58,8 +58,8 @@ const FooterComponent = ({
         </div>
     )
     return (
-        <footer className="bg-neutral-50 container rounded-lg mx-auto">
-            <div className="flex flex-col items-center justify-between p-4">
+        <footer className="container rounded-lg px-[16px]">
+            <div className="flex flex-col items-center justify-between p-[16px] bg-neutral-50">
                 <p className="text-grey-300 small font-inter font-normal">
                     Don’t want to receive any offers in future?
                     <a

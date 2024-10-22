@@ -19,7 +19,7 @@ const CarouselComponent = ({ CarouselImage }: CarouselImageProp) => {
     }
     return (
         <div className="relative mx-auto overflow-hidden container py-6">
-            <h5 className="text-grey-300 font-farro font-bold">
+            <h5 className="text-grey-300 font-farro font-bold px-[16px]">
                 Why choose this course?
             </h5>
             <div
@@ -56,7 +56,7 @@ const CarouselComponent = ({ CarouselImage }: CarouselImageProp) => {
                     <button
                         key={index}
                         onClick={() => goToSlide(index)}
-                        className={`h-2 w-2 rounded-full ${
+                        className={`h-[8px] w-[8px] rounded-full ${
                             CurrentIndex === index
                                 ? "bg-primary-400"
                                 : "bg-primary-200"
