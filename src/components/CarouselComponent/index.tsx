@@ -19,7 +19,7 @@ const CarouselComponent = ({ CarouselImage }: CarouselImageProp) => {
     }
     return (
         <div className="relative mx-auto overflow-hidden container py-6">
-            <h5 className="text-grey-300 font-farro font-bold px-[16px]">
+            <h5 className="text-grey-300 font-farro font-bold px-[16px] md:px-[0px]">
                 Why choose this course?
             </h5>
             <div
