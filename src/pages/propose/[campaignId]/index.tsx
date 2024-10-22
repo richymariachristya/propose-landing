@@ -82,7 +82,6 @@ export default function ProposeLandingPage() {
     return (
         <>
             {loading && <Loader></Loader>}
-            {displayProposalLandingPage}
             {data && (
                 <>
                     <div className={displayProposalLandingPage ? "" : "hidden"}>
