@@ -26,13 +26,13 @@ const CarouselComponent = ({ CarouselImage }: CarouselImageProp) => {
                 className="flex transition-transform duration-500 ease-in-out mt-4"
                 style={{ transform: `translateX(-${CurrentIndex * 100}%)` }}>
                 {CarouselImage.map((image, index) => (
-                    <div key={index} className="w-full flex-shrink-0">
+                    <div key={index} className="w-[300px]">
                         <Image
                             src={image}
                             alt={`Slide ${index}`}
-                            width={1200}
+                            width={300}
                             height={250}
-                            className="w-full object-cover h-[250px]"
+                            className="object-cover h-[250px] mr-[16px]"
                         />
                     </div>
                 ))}

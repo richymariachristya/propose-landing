@@ -6,6 +6,7 @@ import CalendarIcon from "../../../public/icons/calendar-black-icon.svg"
 import EntryTickIcon from "../../../public/icons/check-circle-black.svg"
 import CreditCard from "../../../public/icons/creditCard-black.svg"
 import blueRightArrow from "../../../public/icons/blue-right-arrow.svg"
+import closeButton from '../../../public/icons/close-icon.svg'
 
 interface AboutComponentProp {
     openDialog: any
@@ -36,38 +37,124 @@ const AboutComponent = ({
 }: AboutComponentProp) => {
     // Title and content to pass to the Dialog
     const notInterestedContent = (
-        <div className="w-[450px] h-[auto] mx-auto">
-            <div className="text-center flex flex-col gap-4">
-                <h1 className="font-farro font-bold heading1">
-                    We are sorry to hear that
+        <div className="md:w-[800px] md:h-[auto] mx-auto w-full h-full px-[40px] py-[32px] relative">
+            <button
+            className="absolute md:top-[16px] md:right-[16px] top-[10px] right-[10px]"
+            onClick={() => closeDialog()}>
+                <Image 
+                src={closeButton}
+                alt="close" 
+                className="w-[20px] h-[20px]" 
+                width={20} 
+                height={20}
+                />
+            </button>
+            <div className="text-center flex flex-col">
+                <h1 className="font-farro font-bold text-small text-grey-300 mb-[12px]">
+                    We're Sorry to Hear That
                 </h1>
-                <h6 className="font-farro italic para">
-                    Thank you for letting us know. We’d appreciate it if you
-                    could share a bit more about why you’re not interested in
-                    this proposal. Your feedback helps us improve our offerings.{" "}
+                <h6 className="font-inter text-small text-grey-300 mb-[24px]">
+                    Thank you for letting us know. We'd appreciate it if you could share a bit more about why you're not interested in this proposal. Your feedback helps us improve our offerings.
                 </h6>
-                <p className="mt-6 para-lg">
-                    Hey{" "}
-                    <span className="para-lg font-bold">
-                        {/* {StudentDetails.studentName} */}
-                    </span>
-                </p>
-                <p className="text-center">
-                    Enabling students to choose applicable reason for their
-                    rejection of proposal.
-                </p>
             </div>
-            <div>
-                {/* checkbox  */}
-                <div className="flex justify-start m-2 mb-6">
-                    <input
-                        id="Checkbox type 1"
-                        type="checkbox"
-                        className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-4"
-                    />
-                    <label htmlFor="disabled" className="para font-inter">
-                        Course not aligned with my interests
-                    </label>
+            <div className="flex content-start">
+                <p className="text-left font-inter font-semibold text-small mb-[12px]">
+                    Reasons for Rejection
+                </p>
+                <p className="text-left font-inter font-normal text-x-small">
+                    Select the applicable reasons:
+                </p>
+                <div className='flex gap-[8px] mt-[24px]'>
+                    <div className="flex justify-start">
+                        <input
+                            id="Checkbox type 1"
+                            type="checkbox"
+                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                        />
+                        <label htmlFor="disabled" className="para font-inter">
+                            Course not aligned with my interests
+                        </label>
+                    </div>
+                    <div className="flex justify-start m-2 mb-6">
+                        <input
+                            id="Checkbox type 1"
+                            type="checkbox"
+                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                        />
+                        <label htmlFor="disabled" className="para font-inter">
+                            I have chosen another university
+                        </label>
+                    </div>
+                    <div className="flex justify-start m-2 mb-6">
+                        <input
+                            id="Checkbox type 1"
+                            type="checkbox"
+                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                        />
+                        <label htmlFor="disabled" className="para font-inter">
+                            Financial reasons / Can't afford it
+                        </label>
+                    </div>
+                    <div className="flex justify-start m-2 mb-6">
+                        <input
+                            id="Checkbox type 1"
+                            type="checkbox"
+                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                        />
+                        <label htmlFor="disabled" className="para font-inter">
+                            Location isn't suitable
+                        </label>
+                    </div>
+                    <div className="flex justify-start m-2 mb-6">
+                        <input
+                            id="Checkbox type 1"
+                            type="checkbox"
+                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                        />
+                        <label htmlFor="disabled" className="para font-inter">
+                            Prefer to study in a different country
+                        </label>
+                    </div>
+                    <div className="flex justify-start m-2 mb-6">
+                        <input
+                            id="Checkbox type 1"
+                            type="checkbox"
+                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                        />
+                        <label htmlFor="disabled" className="para font-inter">
+                            Scholarship offer insufficient
+                        </label>
+                    </div>
+                    <div className="flex justify-start m-2 mb-6">
+                        <input
+                            id="Checkbox type 1"
+                            type="checkbox"
+                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                        />
+                        <label htmlFor="disabled" className="para font-inter">
+                            The course start date doesn't work for me
+                        </label>
+                    </div>
+                    <div className="flex justify-start m-2 mb-6">
+                        <input
+                            id="Checkbox type 1"
+                            type="checkbox"
+                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                        />
+                        <label htmlFor="disabled" className="para font-inter">
+                            I'm no longer interested in studying
+                        </label>
+                    </div>
+                    <div className="flex justify-start m-2 mb-6">
+                        <input
+                            id="Checkbox type 1"
+                            type="checkbox"
+                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                        />
+                        <label htmlFor="disabled" className="para font-inter">
+                            Other personal reasons
+                        </label>
+                    </div>
                 </div>
             </div>
             <div className="my-4 w-full flex justify-center mt-[100px]">
@@ -137,14 +224,14 @@ const AboutComponent = ({
                         />
                         <p className="block text-para-lg text-grey-300 font-inter font-semibold">
                             {courseName}
-                            <span className="block small text-grey-300 font-inter font-normal">
+                            <span className="block text-small text-grey-300 font-inter font-normal">
                                 {institutionName}
                             </span>
                         </p>
                     </div>
                     <div className="flex">
                         <a
-                            className="hover:underline no-underline text-primary-400 small font-inter font-semibold inline-flex items-center"
+                            className="hover:underline no-underline text-primary-400 text-small font-inter font-semibold inline-flex items-center"
                             href="#">
                             View more{" "}
                             <Image
