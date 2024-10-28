@@ -4,8 +4,15 @@
         "es2021": true,
         "node": true
     },
-    "extends": ["next/core-web-vitals", "prettier"],
-    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/react"
+    ],
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -13,71 +20,48 @@
         "ecmaVersion": 12,
         "sourceType": "module"
     },
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        "jsx-a11y",
-        "import",
-        "prettier"
-    ],
-    "ignorePatterns": ["cdk/**"],
+    "plugins": ["react", "react-hooks", "jsx-a11y", "import"],
     "rules": {
-        // "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
-        "import/order": [
-            "error",
-            {
-                "groups": [
-                    "builtin", // Built-in types are first
-                    "external", // Then external imports
-                    "internal", // Then internal imports
-                    "parent", // Then parent imports
-                    "sibling", // Then sibling imports
-                    "index" // Then index imports
-                ],
-                "pathGroups": [
-                    {
-                        "pattern": "react",
-                        "group": "external",
-                        "position": "before"
-                    }
-                ],
-                "alphabetize": {
-                    "order": "asc",
-                    "caseInsensitive": true
-                }
-            }
-        ],
-        "prettier/prettier": ["error", { "endOfLine": "auto" }],
-        "@next/next/no-img-element": "off",
-        "react-hooks/exhaustive-deps": "off",
-        "react/jsx-key": "off",
-        "react/no-unescaped-entities": "off",
-        "jsx-a11y/role-supports-aria-props": "off"
-        // "react/react-in-jsx-scope": "off",
-        // "prettier/prettier": "error",
-        // "no-unused-vars": "off",
-        // "@typescript-eslint/no-unused-vars": [
-        //   "warn",
-        //   { "argsIgnorePattern": "^_" }
-        // ],
-        // "no-useless-escape": "off",
-        // "react/jsx-key": "off",
-        // "import/no-anonymous-default-export": "off",
-        // "react-hooks/exhaustive-deps": "off",
-        // "no-dupe-keys": "off",
-        // "no-undef": "error",
-        // "@next/next/no-html-link-for-pages": "off"
+        // General JS rules
+        "no-unused-vars": "warn",
+        "no-console": "warn",
+        "no-debugger": "error",
+        "eqeqeq": "error",
+        "semi": ["error", "always"],
+        "quotes": ["error", "single"],
+        "indent": ["error", 2],
+        "no-multiple-empty-lines": ["warn", { "max": 1 }],
+
+        // React specific rules
+        "react/jsx-uses-react": "off", // Optional for React 17+
+        "react/react-in-jsx-scope": "off", // Optional for React 17+
+        "react/prop-types": "off", // Optional, if you're not using PropTypes
+        "react/jsx-no-duplicate-props": "warn",
+        "react/jsx-no-undef": "error",
+
+        // React Hooks rules
+        "react-hooks/rules-of-hooks": "error", // Checks the rules of Hooks
+        "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+
+        // Accessibility rules
+        "jsx-a11y/alt-text": "warn",
+        "jsx-a11y/anchor-is-valid": "warn",
+
+        // Import rules (optional but recommended for better import management)
+        "import/no-unresolved": "error",
+        "import/named": "error",
+        "import/namespace": "error",
+        "import/default": "error",
+        "import/export": "error"
     },
     "settings": {
         "react": {
-            "version": "detect"
+            "version": "detect" // Automatically detect the React version
         },
         "import/resolver": {
-            "typescript": {}
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
         }
     }
 }
-// {
-//   "extends": "next/core-web-vitals"
-// }
-

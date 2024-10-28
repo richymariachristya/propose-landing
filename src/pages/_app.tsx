@@ -1,6 +1,11 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-
+import { ContextDataProvider } from "@/service/dataContext"
+import "@/styles/globals.css"
+import type { AppProps } from "next/app"
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+    return (
+        <ContextDataProvider>
+            <Component {...pageProps} />
+        </ContextDataProvider>
+    )
 }
+
