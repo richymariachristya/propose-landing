@@ -18,7 +18,7 @@ const DialogComponent = ({
 
     return (
         <div className="fixed top-0 left-0 right-0 bottom-0 bg-black/50 flex items-center justify-center z-50">
-            <div className="bg-white-50 border rounded-lg p-20 w-[600px]">
+            <div className="bg-white-50 border rounded-lg md:w-[800px] md:h-[auto] mx-auto w-full h-full ">
                 {/* <header className="flex items-center justify-between">
                     <button onClick={onClose}>X</button>
                 </header> */}

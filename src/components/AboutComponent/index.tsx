@@ -39,127 +39,127 @@ const AboutComponent = ({
     const notInterestedContent = (
         <div className="md:w-[800px] md:h-[auto] mx-auto w-full h-full px-[40px] py-[32px] relative">
             <button
-            className="absolute md:top-[16px] md:right-[16px] top-[10px] right-[10px]"
+            className="absolute md:top-[16px] md:right-[16px] top-[10px] right-[10px] p-[5px] cursor-pointer"
             onClick={() => closeDialog()}>
                 <Image 
                 src={closeButton}
                 alt="close" 
-                className="w-[20px] h-[20px]" 
-                width={20} 
-                height={20}
+                className="w-[10px] h-[10px]" 
+                width={10} 
+                height={10}
                 />
             </button>
             <div className="text-center flex flex-col">
-                <h1 className="font-farro font-bold text-small text-grey-300 mb-[12px]">
+                <h6 className="font-farro font-bold text-heading6 text-grey-300 mb-[12px]">
                     We're Sorry to Hear That
-                </h1>
-                <h6 className="font-inter text-small text-grey-300 mb-[24px]">
-                    Thank you for letting us know. We'd appreciate it if you could share a bit more about why you're not interested in this proposal. Your feedback helps us improve our offerings.
                 </h6>
+                <p className="font-inter text-small text-grey-300 mb-[24px] font-normal px-[20px]">
+                    Thank you for letting us know. We'd appreciate it if you could share a bit more about why you're not interested in this proposal. Your feedback helps us improve our offerings.
+                </p>
             </div>
-            <div className="flex content-start">
+            <div className="flex content-start flex-col">
                 <p className="text-left font-inter font-semibold text-small mb-[12px]">
                     Reasons for Rejection
                 </p>
                 <p className="text-left font-inter font-normal text-x-small">
                     Select the applicable reasons:
                 </p>
-                <div className='flex gap-[8px] mt-[24px]'>
+                <div className='flex  flex-col gap-[6px] mt-[24px]'>
                     <div className="flex justify-start">
                         <input
                             id="Checkbox type 1"
                             type="checkbox"
-                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                            className="w-[16px] h-[16px] text-blue-600 rounded-2xl mr-[12px] cursor-pointer"
                         />
-                        <label htmlFor="disabled" className="para font-inter">
+                        <label htmlFor="disabled" className="font-inter font-normal text-grey-300 text-small">
                             Course not aligned with my interests
                         </label>
                     </div>
-                    <div className="flex justify-start m-2 mb-6">
+                    <div className="flex justify-start">
                         <input
                             id="Checkbox type 1"
                             type="checkbox"
-                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                            className="w-[16px] h-[16px] text-blue-600 rounded-2xl mr-[12px] cursor-pointer"
                         />
-                        <label htmlFor="disabled" className="para font-inter">
+                        <label htmlFor="disabled" className="font-inter font-normal text-grey-300 text-small">
                             I have chosen another university
                         </label>
                     </div>
-                    <div className="flex justify-start m-2 mb-6">
+                    <div className="flex justify-start">
                         <input
                             id="Checkbox type 1"
                             type="checkbox"
-                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                            className="w-[16px] h-[16px] text-blue-600 rounded-2xl mr-[12px] cursor-pointer"
                         />
-                        <label htmlFor="disabled" className="para font-inter">
+                        <label htmlFor="disabled" className="font-inter font-normal text-grey-300 text-small">
                             Financial reasons / Can't afford it
                         </label>
                     </div>
-                    <div className="flex justify-start m-2 mb-6">
+                    <div className="flex justify-start">
                         <input
                             id="Checkbox type 1"
                             type="checkbox"
-                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                            className="w-[16px] h-[16px] text-blue-600 rounded-2xl mr-[12px] cursor-pointer"
                         />
-                        <label htmlFor="disabled" className="para font-inter">
+                        <label htmlFor="disabled" className="font-inter font-normal text-grey-300 text-small">
                             Location isn't suitable
                         </label>
                     </div>
-                    <div className="flex justify-start m-2 mb-6">
+                    <div className="flex justify-start">
                         <input
                             id="Checkbox type 1"
                             type="checkbox"
-                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                            className="w-[16px] h-[16px] text-blue-600 rounded-2xl mr-[12px] cursor-pointer"
                         />
-                        <label htmlFor="disabled" className="para font-inter">
+                        <label htmlFor="disabled" className="font-inter font-normal text-grey-300 text-small">
                             Prefer to study in a different country
                         </label>
                     </div>
-                    <div className="flex justify-start m-2 mb-6">
+                    <div className="flex justify-start">
                         <input
                             id="Checkbox type 1"
                             type="checkbox"
-                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                            className="w-[16px] h-[16px] text-blue-600 rounded-2xl mr-[12px] cursor-pointer"
                         />
-                        <label htmlFor="disabled" className="para font-inter">
+                        <label htmlFor="disabled" className="font-inter font-normal text-grey-300 text-small">
                             Scholarship offer insufficient
                         </label>
                     </div>
-                    <div className="flex justify-start m-2 mb-6">
+                    <div className="flex justify-start">
                         <input
                             id="Checkbox type 1"
                             type="checkbox"
-                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                            className="w-[16px] h-[16px] text-blue-600 rounded-2xl mr-[12px] cursor-pointer"
                         />
-                        <label htmlFor="disabled" className="para font-inter">
+                        <label htmlFor="disabled" className="font-inter font-normal text-grey-300 text-small">
                             The course start date doesn't work for me
                         </label>
                     </div>
-                    <div className="flex justify-start m-2 mb-6">
+                    <div className="flex justify-start">
                         <input
                             id="Checkbox type 1"
                             type="checkbox"
-                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                            className="w-[16px] h-[16px] text-blue-600 rounded-2xl mr-[12px] cursor-pointer"
                         />
-                        <label htmlFor="disabled" className="para font-inter">
+                        <label htmlFor="disabled" className="font-inter font-normal text-grey-300 text-small">
                             I'm no longer interested in studying
                         </label>
                     </div>
-                    <div className="flex justify-start m-2 mb-6">
+                    <div className="flex justify-start">
                         <input
                             id="Checkbox type 1"
                             type="checkbox"
-                            className="w-[24px] h-[24px] text-blue-600 rounded-2xl mr-[12px]"
+                            className="w-[16px] h-[16px] text-blue-600 rounded-2xl mr-[12px] cursor-pointer"
                         />
-                        <label htmlFor="disabled" className="para font-inter">
+                        <label htmlFor="disabled" className="font-inter font-normal text-grey-300 text-small">
                             Other personal reasons
                         </label>
                     </div>
                 </div>
             </div>
-            <div className="my-4 w-full flex justify-center mt-[100px]">
+            <div className="w-full flex justify-end mt-[16px]">
                 <button
-                    className="btn border bg-primary-400 text-white-50 w-[242px] h-[40px] hover:text-primary-400 hover:bg-white-50 hover:border-primary-400"
+                    className="btn border bg-primary-400 text-white-50 w-auto h-[40px] hover:text-primary-400 hover:bg-white-50 hover:border-primary-400 cursor-pointer"
                     onClick={() => closeDialog()}>
                     Submit
                 </button>
