@@ -22,47 +22,56 @@ const OfferTimelineComponent = ({
         minutes: 0,
         seconds: 0,
     })
+    const formatDate = (dateString: any) => {
+        const date = new Date(dateString)
+        return date
+            .toLocaleDateString("en-GB", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric",
+            })
+            .replace(/ /g, "-")
+    }
+    // useEffect(() => {
+    //     const expirationDate = new Date(expirydate.toString()).getTime()
+    //     const updateCountdown = () => {
+    //         const currentTime = new Date().getTime()
+    //         const difference = expirationDate - currentTime
 
-    useEffect(() => {
-        const expirationDate = new Date(expirydate.toString()).getTime()
+    //         // If the time difference is greater than 0, continue calculating
+    //         if (difference > 0) {
+    //             // Calculate hours, minutes, and seconds
+    //             const hours = Math.floor(difference / (1000 * 60 * 60))
+    //             const minutes = Math.floor(
+    //                 (difference % (1000 * 60 * 60)) / (1000 * 60)
+    //             )
+    //             const seconds = Math.floor((difference % (1000 * 60)) / 1000)
 
-        const updateCountdown = () => {
-            const currentTime = new Date().getTime()
-            const difference = expirationDate - currentTime
+    //             // Update the state with the remaining time
+    //             setTimeRemaining({ hours, minutes, seconds })
+    //         } else {
+    //             // Time has expired, set the remaining time to 0
+    //             setTimeRemaining({ hours: 0, minutes: 0, seconds: 0 })
+    //         }
+    //     }
 
-            // If the time difference is greater than 0, continue calculating
-            if (difference > 0) {
-                // Calculate hours, minutes, and seconds
-                const hours = Math.floor(difference / (1000 * 60 * 60))
-                const minutes = Math.floor(
-                    (difference % (1000 * 60 * 60)) / (1000 * 60)
-                )
-                const seconds = Math.floor((difference % (1000 * 60)) / 1000)
+    //     // Update the countdown every second
+    //     const interval = setInterval(updateCountdown, 1000)
 
-                // Update the state with the remaining time
-                setTimeRemaining({ hours, minutes, seconds })
-            } else {
-                // Time has expired, set the remaining time to 0
-                setTimeRemaining({ hours: 0, minutes: 0, seconds: 0 })
-            }
-        }
-
-        // Update the countdown every second
-        const interval = setInterval(updateCountdown, 1000)
-
-        // Cleanup the interval on component unmount
-        return () => clearInterval(interval)
-    }, [])
+    //     // Cleanup the interval on component unmount
+    //     return () => clearInterval(interval)
+    // }, [])
     return (
         <>
             <div className="md:h-[40px] bg-secondary-500 flex justify-center md:py-[10px] py-[8px] px-[16px]">
                 <p className="text-white-50 text-small h-auto text-center">
-                    This proposal is valid until{" "}
+                    This offer ends in {formatDate(expirydate)}
+                    {/* This proposal is valid until{" "}
                     {`${timeRemaining.hours.toString().padStart(2, "0")}`}h{" "}
                     {`${timeRemaining.minutes.toString().padStart(2, "0")}`}m{" "}
                     {`${timeRemaining.seconds.toString().padStart(2, "0")}`}s.
                     We encourage you to take advantage of this offer before the
-                    deadline to ensure your spot in the program.
+                    deadline to ensure your spot in the program. */}
                 </p>
             </div>
             <div className="h-[40px] bg-white flex justify-center">

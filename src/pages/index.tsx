@@ -2,13 +2,6 @@ import Head from "next/head"
 import ProposeLandingPage from "./proposal/[campaignId]"
 
 export default function Home() {
-    const headerData = {
-        studentName: "Neil",
-    }
-    const contentData = {
-        universityName: "RMIT",
-        courseName: "Bachelor of Engineering",
-    }
     return (
         <>
             <Head>

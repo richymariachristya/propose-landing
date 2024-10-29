@@ -54,62 +54,16 @@ export default function ProposeLandingPage() {
     const getUserProfileDetails = async (tokens: any) => {
         try {
             setLoading(true)
-            // await getStudentInfo(tokens).then((res: any) => {
-            setLoading(false)
-            let res = {
-                message: {
-                    proposal_id: "propose-20240930-1",
-                    student_uuid: "96cab4c6-2ad8-4076-bc20-174a33c2053c",
-                    course_id: "PRG-AU-00063738",
-                    campaign_id: "campg-1",
-                    institution_logo_url:
-                        "https://www.unisq.edu.au/Content/USQ/Charlie/Images/unisq-logo.svg",
-                    institution_id: "IID-AU-001",
-                    institution_name: "RMIT Univeristy",
-                    institution_representative_name: "Propose Team",
-                    student_welcome_text: "Hari",
-                    course_name: "Msc Bunised analyises",
-                    proposal_expiry_date: "2024-10-28",
-                    course_details: [
-                        {
-                            institution_logo_url: "",
-                            course_name: "Msc Bunised analyises",
-                            institution_name: "RMIT Univeristy",
-                            rank: "101st",
-                            study_level: "Masters degree",
-                            location: "Birmingham, UK",
-                            start_date: "jan 30, 2024",
-                            entry_score: "IELTS 6.5",
-                            cost: "£29,000",
-                        },
-                    ],
-                    carousel_images: [
-                        "https://images.ctfassets.net/8bbwomjfix8m/6zjBSfh46MZ3Zbyrdak9ux/598514dcd1ac9ebccfab66d3c59af238/Study-in-Canada.jpg",
-                        "https://images.ctfassets.net/8bbwomjfix8m/5Cvk9MhZe3JF9l6giwWmVH/fa3f5b44effbf2c403204bfffcbf81e1/Ireland_2.jpg",
-                        "https://images.ctfassets.net/8bbwomjfix8m/2CYqmyVmRIAh3o6rmQt8dK/fa6df88d95385ffb8ad0b1acdae99e68/Australia.jpg",
-                        "https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2022/05/01082927/partha-narasimhan-x0NvSdPk404-unsplash-1600x900.jpg",
-                    ],
-                    why_this_course:
-                        "We noticed you've been exploring [Course X] and [University Y]. Based on your interest, we believe [Course Z] could be a perfect match for you. It aligns well with your previous searches and has a strong reputation in [subject field]",
-                    ai_course_text:
-                        "Since you've previously applied to [University A] for [Course B], we thought you'd be interested in [Course C] at [University D]. This course offers similar benefits but with a stronger focus on [specific area], making it a great alternative.",
-                    core_proposal_text: "core_proposal_text",
-                    is_active: true,
-                    proposal_status: "Awaiting",
-                    proposal_link:
-                        "https://new.dev.idp.com/propose/campg-1/?token=xq8BRGJTnSpjpAO3Ka84zpyrtWFFr94W5Nvkz98Dbs9SwJS6FxrZWG1dZuyGa8NvjJybRLBoQlmZNh/DObQdNA==",
-                    created_date: "2024-10-07T06:38:01.001Z",
-                    updated_date: "2024-10-07T06:38:01.001Z",
-                },
-            }
-            setData(res.message)
-            setProposalStatus(
-                res.message.proposal_status === "Accepted" ||
-                    res.message.proposal_status === "Rejected"
-                    ? false
-                    : true
-            )
-            // })
+            await getStudentInfo(tokens).then((res: any) => {
+                setLoading(false)
+                setData(res.message)
+                setProposalStatus(
+                    res.message.proposal_status === "Accepted" ||
+                        res.message.proposal_status === "Rejected"
+                        ? false
+                        : true
+                )
+            })
         } catch (error) {
             setLoading(false)
             console.error("Error fetching user profile results", error)
@@ -155,7 +109,7 @@ export default function ProposeLandingPage() {
                                 institutionSite={
                                     institutionProp.institutionSite
                                 }
-                                expirydate={data?.proposal_expiry_date}
+                                expirydate={data?.proposal_validity_date}
                             />
                         )}
                         <HeroBannerComponent
@@ -195,7 +149,7 @@ export default function ProposeLandingPage() {
                                                     }
                                                     courseName={res.course_name}
                                                     instituteSmallLogo={
-                                                        data.institution_logo_url
+                                                        data?.institution_logo_url
                                                     }
                                                     worldRanking={res.rank}
                                                     startDate={res.start_date}
@@ -209,11 +163,11 @@ export default function ProposeLandingPage() {
                                 </div>
                             </div>
                         </div>
-                        {data && (
+                        {/* {data && (
                             <CarouselComponent
                                 CarouselImage={data?.carousel_images}
                             />
-                        )}
+                        )} */}
                         <RegardsComponent
                             institutionName={data?.institution_name}
                         />
