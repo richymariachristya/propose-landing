@@ -167,43 +167,147 @@ const AboutComponent = ({
         </div>
     )
     const oipContent = (
-        <div className="w-[450px] h-[auto] mx-auto">
-            <div className="text-center flex flex-col gap-4">
-                <h1 className="font-farro font-bold heading1">
-                    Congratulations!!!
-                </h1>
-                <h6 className="font-farro italic para">
-                    You are One step Closer to studying your dream cours﻿e
+        <div className="md:w-[800px] md:h-[auto] mx-auto w-full h-full px-[40px] py-[32px] relative">
+            <button
+            className="absolute md:top-[16px] md:right-[16px] top-[10px] right-[10px] p-[5px] cursor-pointer"
+            onClick={() => closeDialog()}>
+                <Image 
+                src={closeButton}
+                alt="close" 
+                className="w-[10px] h-[10px]" 
+                width={10} 
+                height={10}
+                />
+            </button>
+            <div className="text-center flex flex-col">
+                <h6 className="font-farro font-bold text-heading6 text-grey-300 mb-[12px]">
+                    We're Sorry to Hear That
                 </h6>
-                <p className="mt-6 para-lg">
-                    Hey{" "}
-                    <span className="para-lg font-bold">
-                        {/* {StudentDetails.studentName} */}
-                    </span>
-                </p>
-                <p className="text-center">
-                    {" "}
-                    Based on the details you gave us, you are eligible
-                    {/* for the {institutionProp.instituteCourseName}{" "}
-                {institutionProp.institutionName} of{" "}
-                {institutionProp.instituteLocation}. They would like */}
-                    to give you an offer in principle (ID No.
-                    OIP-20240327-280990) for this course starting Semester 1
-                    (September), 2024 on 16.09.2024 at the City Campus with some
-                    additional conditions. What is an "offer in principle"? An
-                    offer in principle is an indication from the institution
-                    that they're interested in your application, based on the
-                    information you've supplied.It is not a formal offer of
-                    admission to this university. A formal offer may have
-                    conditions attached.
-                </p>
-            </div>
-            <div className="my-4 w-full flex justify-center mt-[100px]">
-                <button
-                    className="btn border bg-primary-400 text-white-50 w-[242px] h-[40px] hover:text-primary-400 hover:bg-white-50 hover:border-primary-400"
-                    onClick={() => closeDialog()}>
-                    Submit
-                </button>
+                <form>
+                    <div className="flex flex-col gap-[8px]">
+                        {/* username */}
+                        <div className="col-span-full">
+                            <label htmlFor="username" className="block text-small font-semibold font-inter text-left text-neutral-400">
+                            First name
+                            </label>
+                            <div className="mt-2">
+                                <div className="flex rounded-md shadow-sm ring-1 ring-inset bg-neutral-50 border border-neutral-400">
+                                    <input
+                                        id="First name"
+                                        name="First name"
+                                        type="text"
+                                        placeholder="Neil"
+                                        autoComplete="First name"
+                                        className="block flex-1 bg-neutral-50 py-[10px] pl-[12px] text-grey-300 placeholder:text-grey-300 text-small font-inter font-normal rounded-md"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        {/* last name  */}
+                        <div className="col-span-full">
+                            <label htmlFor="username" className="block text-small font-semibold font-inter text-left text-neutral-400">
+                            Last name
+                            </label>
+                            <div className="mt-2">
+                                <div className="flex rounded-md shadow-sm ring-1 ring-inset bg-neutral-50 border border-neutral-400">
+                                    <input
+                                        id="Last name"
+                                        name="Last name"
+                                        type="text"
+                                        placeholder="Burges"
+                                        autoComplete="Last name"
+                                        className="block flex-1 bg-neutral-50 py-[10px] pl-[12px] text-grey-300 placeholder:text-grey-300 text-small font-inter font-normal rounded-md"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        {/* Educational qualification */}
+                        <div className="col-span-full">
+                            <label htmlFor="username" className="block text-small font-semibold font-inter text-left text-neutral-600">
+                            Educational Qualification
+                            </label>
+                            <div className="mt-2">
+                                <div className="flex rounded-md shadow-sm ring-1 ring-inset bg-neutral-50 border border-neutral-400">
+                                    <input
+                                        id="Type here"
+                                        name="Type here"
+                                        type="text"
+                                        placeholder="Type here"
+                                        autoComplete="Type here"
+                                        className="block flex-1 bg-white-50 py-[10px] pl-[12px] text-grey-300 placeholder:text-grey-300 text-small font-inter font-normal rounded-md"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        {/* Phone number */}
+                        <div className="col-span-full">
+                            <label htmlFor="username" className="block text-small font-semibold font-inter text-left text-neutral-600">
+                            Phone number
+                            </label>
+                            <div className="mt-2 flex gap-[8px] w-full">
+                                <div className="inline-flex bg-neutral-50 border border-neutral-400 rounded-md w-[80px]">
+                                    <select
+                                    id="country"
+                                    name="country"
+                                    autoComplete="country-code"
+                                    className="py-[10px] pl-[12px] text-small font-inter font-normal rounded-md flex"
+                                    >
+                                        <option>+91</option>
+                                        <option>+1</option>
+                                        <option>+61</option>
+                                    </select>
+                                </div>
+                                <div className="inline-flex bg-neutral-50 border border-neutral-400 rounded-md w-full">
+                                    <input
+                                        id="Type here"
+                                        name="Type here"
+                                        type="number"
+                                        placeholder="Type here"
+                                        autoComplete="Type here"
+                                        className="block flex-1 bg-white-50 py-[10px] pl-[12px] text-grey-300 placeholder:text-grey-300 text-small font-inter font-normal rounded-md"
+                                    />
+                                </div>
+                                
+                            </div>
+                        </div>
+                        {/* Form title  */}
+                        <div className="col-span-full">
+                            <label htmlFor="username" className="block text-small font-semibold font-inter text-left text-neutral-600">
+                            Form title
+                            </label>
+                            <div className="mt-2 flex flex-col gap-[6px]">
+                                <div className="flex justify-start">
+                                    <input
+                                        id="Checkbox type 1"
+                                        type="checkbox"
+                                        className="w-[16px] h-[16px] text-blue-600 rounded-2xl mr-[12px] cursor-pointer"
+                                    />
+                                    <label htmlFor="disabled" className="font-inter font-normal text-grey-300 text-small">
+                                        Lorem ipsum
+                                    </label>
+                                </div>
+                                <div className="flex justify-start">
+                                    <input
+                                        id="Checkbox type 1"
+                                        type="checkbox"
+                                        className="w-[16px] h-[16px] text-blue-600 rounded-2xl mr-[12px] cursor-pointer"
+                                    />
+                                    <label htmlFor="disabled" className="font-inter font-normal text-grey-300 text-small">
+                                        Lorem ipsum
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </form>
+                <div className="my-4 w-full flex justify-end mt-[16px]">
+                    <button
+                        className="btn border bg-primary-400 text-white-50 h-[40px] hover:text-primary-400 hover:bg-white-50 hover:border-primary-400"
+                        onClick={() => closeDialog()}>
+                        Get OIP
+                    </button>
+                </div>
             </div>
         </div>
     )
